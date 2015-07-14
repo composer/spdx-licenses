@@ -1,23 +1,16 @@
 <?php
 
 /*
- * This file is part of Composer.
+ * This file is part of composer/spdx-licenses.
  *
- * (c) Nils Adermann <naderman@naderman.de>
- *     Jordi Boggiano <j.boggiano@seld.be>
+ * (c) Composer <https://github.com/composer>
  *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
+ * For the full copyright and license information, please view
+ * the LICENSE file that was distributed with this source code.
  */
 
-namespace Composer\Util;
+namespace Composer\Spdx;
 
-/**
- * Supports composer array and SPDX tag notation for disjunctive/conjunctive
- * licenses.
- *
- * @author Tom Klingenberg <tklingenberg@lastflood.net>
- */
 class SpdxLicense
 {
     /** @var array */
@@ -135,8 +128,8 @@ class SpdxLicense
     /**
      * @param array|string $license
      *
-     * @return bool
      * @throws \InvalidArgumentException
+     * @return bool
      */
     public function validate($license)
     {
@@ -145,7 +138,7 @@ class SpdxLicense
             if ($count !== count(array_filter($license, 'is_string'))) {
                 throw new \InvalidArgumentException('Array of strings expected.');
             }
-            $license = $count > 1  ? '('.implode(' OR ', $license).')' : (string) reset($license);
+            $license = $count > 1  ? '(' . implode(' OR ', $license) . ')' : (string) reset($license);
         }
 
         if (!is_string($license)) {
@@ -167,7 +160,7 @@ class SpdxLicense
             return $this->licenses;
         }
 
-        $jsonFile = file_get_contents(__DIR__ . '/../../../res/spdx-licenses.json');
+        $jsonFile = file_get_contents(__DIR__ . '/../res/spdx-licenses.json');
         $this->licenses = json_decode($jsonFile, true);
 
         return $this->licenses;
@@ -182,7 +175,7 @@ class SpdxLicense
             return $this->exceptions;
         }
 
-        $jsonFile = file_get_contents(__DIR__ . '/../../../res/spdx-exceptions.json');
+        $jsonFile = file_get_contents(__DIR__ . '/../res/spdx-exceptions.json');
         $this->exceptions = json_decode($jsonFile, true);
 
         return $this->exceptions;
@@ -191,8 +184,8 @@ class SpdxLicense
     /**
      * @param string $license
      *
-     * @return bool
      * @throws \RuntimeException
+     * @return bool
      */
     private function isValidLicenseString($license)
     {
@@ -212,7 +205,7 @@ class SpdxLicense
             static $offset = 0;
 
             if ($offset >= strlen($license)) {
-                return null;
+                return;
             }
 
             foreach ($tokens as $name => $token) {

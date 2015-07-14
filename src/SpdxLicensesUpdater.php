@@ -1,20 +1,19 @@
 <?php
 
 /*
- * This file is part of Composer.
+ * This file is part of composer/spdx-licenses.
  *
- * (c) Nils Adermann <naderman@naderman.de>
- *     Jordi Boggiano <j.boggiano@seld.be>
+ * (c) Composer <https://github.com/composer>
  *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
+ * For the full copyright and license information, please view
+ * the LICENSE file that was distributed with this source code.
  */
 
-namespace Composer\Util;
+namespace Composer\Spdx;
 
 /**
  * The SPDX Licenses Updater scrapes licenses from the spdx website
- * and updates the "res/spdx-licenses.json" file accordingly.
+ * and updates the "res/*.json" file accordingly.
  *
  * The class is used by the update script "bin/update-spdx-licenses".
  */
@@ -69,7 +68,7 @@ class SpdxLicensesUpdater
     {
         $licenses = array();
 
-        $dom = new \DOMDocument;
+        $dom = new \DOMDocument();
         @$dom->loadHTMLFile($url);
 
         $xPath = new \DOMXPath($dom);
@@ -83,9 +82,9 @@ class SpdxLicensesUpdater
                 continue;
             }
 
-            if (trim($tds->item(3)->nodeValue) == 'License Text') {
-                $fullname    = trim($tds->item(0)->nodeValue);
-                $identifier  = trim($tds->item(1)->nodeValue);
+            if (trim($tds->item(3)->nodeValue) === 'License Text') {
+                $fullname = trim($tds->item(0)->nodeValue);
+                $identifier = trim($tds->item(1)->nodeValue);
                 $osiApproved = ((isset($tds->item(2)->nodeValue) && $tds->item(2)->nodeValue === 'Y')) ? true : false;
 
                 // The license URL is not scraped intentionally to keep json file size low.
@@ -108,7 +107,7 @@ class SpdxLicensesUpdater
     {
         $exceptions = array();
 
-        $dom = new \DOMDocument;
+        $dom = new \DOMDocument();
         @$dom->loadHTMLFile($url);
 
         $xPath = new \DOMXPath($dom);
@@ -122,9 +121,9 @@ class SpdxLicensesUpdater
                 continue;
             }
 
-            if (trim($tds->item(2)->nodeValue) == 'License Exception Text') {
-                $fullname    = trim($tds->item(0)->nodeValue);
-                $identifier  = trim($tds->item(1)->nodeValue);
+            if (trim($tds->item(2)->nodeValue) === 'License Exception Text') {
+                $fullname = trim($tds->item(0)->nodeValue);
+                $identifier = trim($tds->item(1)->nodeValue);
 
                 // The license URL is not scraped intentionally to keep json file size low.
                 // It's build when requested, see SpdxLicense->getLicenseExceptionByIdentifier().
