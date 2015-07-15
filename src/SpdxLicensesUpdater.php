@@ -88,7 +88,7 @@ class SpdxLicensesUpdater
                 $osiApproved = ((isset($tds->item(2)->nodeValue) && $tds->item(2)->nodeValue === 'Y')) ? true : false;
 
                 // The license URL is not scraped intentionally to keep json file size low.
-                // It's build when requested, see SpdxLicense->getLicenseByIdentifier().
+                // It's build when requested, see SpdxLicenses->getLicenseByIdentifier().
                 //$licenseURL = $tds->item(3)->getAttribute('href');
 
                 $licenses += array($identifier => array($fullname, $osiApproved));
@@ -126,7 +126,7 @@ class SpdxLicensesUpdater
                 $identifier = trim($tds->item(1)->nodeValue);
 
                 // The license URL is not scraped intentionally to keep json file size low.
-                // It's build when requested, see SpdxLicense->getLicenseExceptionByIdentifier().
+                // It's build when requested, see SpdxLicenses->getLicenseExceptionByIdentifier().
                 //$licenseURL = $tds->item(2)->getAttribute('href');
 
                 $exceptions += array($identifier => array($fullname));

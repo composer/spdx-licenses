@@ -11,18 +11,18 @@
 
 namespace Composer\Spdx\Test;
 
-use Composer\Spdx\SpdxLicense;
+use Composer\Spdx\SpdxLicenses;
 
-class SpdxLicenseTest extends \PHPUnit_Framework_TestCase
+class SpdxLicensesTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @var SpdxLicense
+     * @var SpdxLicenses
      */
     private $license;
 
     public function setUp()
     {
-        $this->license = new SpdxLicense();
+        $this->license = new SpdxLicenses();
     }
 
     /**

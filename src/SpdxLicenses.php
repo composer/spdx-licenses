@@ -11,7 +11,7 @@
 
 namespace Composer\Spdx;
 
-class SpdxLicense
+class SpdxLicenses
 {
     /**
      * Contains all the licenses.
