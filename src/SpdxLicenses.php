@@ -29,6 +29,11 @@ class SpdxLicenses
     private $licenses;
 
     /**
+     * @var string
+     */
+    private $licensesExpression;
+
+    /**
      * Contains all the license exceptions.
      *
      * The array is indexed by license exception identifiers, which contain
@@ -42,6 +47,11 @@ class SpdxLicenses
      * @var array
      */
     private $exceptions;
+
+    /**
+     * @var string
+     */
+    private $exceptionsExpression;
 
     public function __construct()
     {
@@ -132,34 +142,6 @@ class SpdxLicenses
     }
 
     /**
-     * Check if the identifier for a license is valid.
-     *
-     * @param string $identifier
-     *
-     * @return bool
-     */
-    private function isValidLicenseIdentifier($identifier)
-    {
-        $identifiers = array_keys($this->licenses);
-
-        return in_array($identifier, $identifiers);
-    }
-
-    /**
-     * Check, if the identifier for a exception is valid.
-     *
-     * @param string $identifier
-     *
-     * @return bool
-     */
-    private function isValidExceptionIdentifier($identifier)
-    {
-        $identifiers = array_keys($this->exceptions);
-
-        return in_array($identifier, $identifiers);
-    }
-
-    /**
      * @param array|string $license
      *
      * @throws \InvalidArgumentException
@@ -185,34 +167,52 @@ class SpdxLicenses
         return $this->isValidLicenseString($license);
     }
 
-    /**
-     * @return array
-     */
     private function loadLicenses()
     {
-        if (is_array($this->licenses)) {
-            return $this->licenses;
+        if (null === $this->licenses) {
+            $jsonFile = file_get_contents(__DIR__ . '/../res/spdx-licenses.json');
+            $this->licenses = json_decode($jsonFile, true);
         }
+    }
 
-        $jsonFile = file_get_contents(__DIR__ . '/../res/spdx-licenses.json');
-        $this->licenses = json_decode($jsonFile, true);
-
-        return $this->licenses;
+    private function loadExceptions()
+    {
+        if (null === $this->exceptions) {
+            $jsonFile = file_get_contents(__DIR__ . '/../res/spdx-exceptions.json');
+            $this->exceptions = json_decode($jsonFile, true);
+        }
     }
 
     /**
-     * @return array
+     * @return string
      */
-    private function loadExceptions()
+    private function getLicensesExpression()
     {
-        if (is_array($this->exceptions)) {
-            return $this->exceptions;
+        if (null === $this->licensesExpression) {
+            $licenses = array_map('preg_quote', array_keys($this->licenses));
+            sort($licenses);
+            $licenses = array_reverse($licenses);
+            $licenses = implode('|', $licenses);
+            $this->licensesExpression = $licenses;
         }
 
-        $jsonFile = file_get_contents(__DIR__ . '/../res/spdx-exceptions.json');
-        $this->exceptions = json_decode($jsonFile, true);
+        return $this->licensesExpression;
+    }
 
-        return $this->exceptions;
+    /**
+     * @return string
+     */
+    private function getExceptionsExpression()
+    {
+        if (null === $this->exceptionsExpression) {
+            $exceptions = array_map('preg_quote', array_keys($this->exceptions));
+            sort($exceptions);
+            $exceptions = array_reverse($exceptions);
+            $exceptions = implode('|', $exceptions);
+            $this->exceptionsExpression = $exceptions;
+        }
+
+        return $this->exceptionsExpression;
     }
 
     /**
@@ -223,53 +223,48 @@ class SpdxLicenses
      */
     private function isValidLicenseString($license)
     {
-        $licenses = array_map('preg_quote', array_keys($this->licenses));
-        sort($licenses);
-        $licenses = array_reverse($licenses);
-        $licenses = implode('|', $licenses);
+        $licenses = $this->getLicensesExpression();
+        $exceptions = $this->getExceptionsExpression();
 
-        $exceptions = array_map('preg_quote', array_keys($this->exceptions));
-        sort($exceptions);
-        $exceptions = array_reverse($exceptions);
-        $exceptions = implode('|', $exceptions);
+        $regex = <<<REGEX
+{
+(?(DEFINE)
+    # idstring: 1*( ALPHA / DIGIT / - / . )
+    (?<idstring>[\pL\pN\-\.]{1,})
 
-        $regex = "{
-            (?(DEFINE)
-                # idstring: 1*( ALPHA / DIGIT / - / . )
-                (?<idstring>[\pL\pN\-\.]{1,})
+    # license-id: taken from list
+    (?<licenseid>${licenses})
 
-                # license-id: taken from list
-                (?<licenseid>${licenses})
+    # license-exception-id: taken from list
+    (?<licenseexceptionid>${exceptions})
 
-                # license-exception-id: taken from list
-                (?<licenseexceptionid>${exceptions})
+    # license-ref: [DocumentRef-1*(idstring):]LicenseRef-1*(idstring)
+    (?<licenseref>(?:DocumentRef-(?&idstring):)?LicenseRef-(?&idstring))
 
-                # license-ref: [DocumentRef-1*(idstring):]LicenseRef-1*(idstring)
-                (?<licenseref>(?:DocumentRef-(?&idstring):)?LicenseRef-(?&idstring))
+    # simple-expresssion: license-id / license-id+ / license-ref
+    (?<simple_expression>(?&licenseid)\+? | (?&licenseid) | (?&licenseref))
 
-                # simple-expresssion: license-id / license-id+ / license-ref
-                (?<simple_expression>(?&licenseid)\+? | (?&licenseid) | (?&licenseref))
+    # compound expression: 1*(
+    #   simple-expression /
+    #   simple-expression WITH license-exception-id /
+    #   compound-expression AND compound-expression /
+    #   compound-expression OR compound-expression
+    # ) / ( compound-expression ) )
+    (?<compound_head>
+        (?&simple_expression) ( \s+ (?:with|WITH) \s+ (?&licenseexceptionid))?
+            | \( \s* (?&compound_expression) \s* \)
+    )
+    (?<compound_expression>
+        (?&compound_head) (?: \s+ (?:and|AND|or|OR) \s+ (?&compound_expression))?
+    )
 
-                # compound expression: 1*(
-                #   simple-expression /
-                #   simple-expression WITH license-exception-id /
-                #   compound-expression AND compound-expression /
-                #   compound-expression OR compound-expression
-                # ) / ( compound-expression ) )
-                (?<compound_head>
-                    (?&simple_expression) ( \s+ (?:with|WITH) \s+ (?&licenseexceptionid))?
-                        | \( \s* (?&compound_expression) \s* \)
-                )
-                (?<compound_expression>
-                    (?&compound_head) (?: \s+ (?:and|AND|or|OR) \s+ (?&compound_expression))?
-                )
+    # license-expression: 1*1(simple-expression / compound-expression)
+    (?<license_expression>(?&compound_expression) | (?&simple_expression))
+) # end of define
 
-                # license-expression: 1*1(simple-expression / compound-expression)
-                (?<license_expression>NONE | NOASSERTION | (?&compound_expression) | (?&simple_expression))
-            ) # end of define
-
-            ^(?&license_expression)$
-        }x";
+^(NONE | NOASSERTION | (?&license_expression))$
+}x
+REGEX;
 
         $match = preg_match($regex, $license);
 
