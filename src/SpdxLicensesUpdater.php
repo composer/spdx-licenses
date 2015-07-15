@@ -23,7 +23,7 @@ class SpdxLicensesUpdater
      * @param string $file
      * @param string $url
      */
-    public function dumpLicenses($file, $url = 'http://www.spdx.org/licenses/')
+    public function dumpLicenses($file, $url = 'https://spdx.org/licenses/index.html')
     {
         $options = 0;
 
@@ -43,7 +43,7 @@ class SpdxLicensesUpdater
      * @param string $file
      * @param string $url
      */
-    public function dumpExceptions($file, $url = 'http://www.spdx.org/licenses/exceptions-index.html')
+    public function dumpExceptions($file, $url = 'https://spdx.org/licenses/exceptions-index.html')
     {
         $options = 0;
 

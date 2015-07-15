@@ -68,7 +68,7 @@ class SpdxLicense
         }
 
         $license = $this->licenses[$identifier];
-        $license[] = 'http://spdx.org/licenses/' . $identifier . '.html#licenseText';
+        $license[] = 'https://spdx.org/licenses/' . $identifier . '.html#licenseText';
 
         return $license;
     }
@@ -92,7 +92,7 @@ class SpdxLicense
         }
 
         $license = $this->exceptions[$identifier];
-        $license[] = 'http://spdx.org/licenses/' . $identifier . '.html#licenseExceptionText';
+        $license[] = 'https://spdx.org/licenses/' . $identifier . '.html#licenseExceptionText';
 
         return $license;
     }
