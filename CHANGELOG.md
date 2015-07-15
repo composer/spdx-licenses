@@ -9,6 +9,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### [1.0.0] 2015-07-15
 
-  * Switch to regex implementation in favor of lexer.
-  * Cleaned up files using php-cs-fixer.
-  * Changed namespaces and classnames.
+  * Break: the following classes and namespaces were renamed:
+    - Namespace: `Composer\Util` -> `Composer\Spdx`
+    - Classname: `SpdxLicense` -> `SpdxLicenses`
+    - Classname: `SpdxLicenseTest` -> `SpdxLicensesTest`
+    - Classname: `Updater` -> `SpdxLicensesUpdater`
+  * Changed: validation to regex implementation in favor of lexer.
+  * Changed: code style using php-cs-fixer.
