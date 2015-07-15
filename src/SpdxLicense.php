@@ -13,10 +13,34 @@ namespace Composer\Spdx;
 
 class SpdxLicense
 {
-    /** @var array */
+    /**
+     * Contains all the licenses.
+     *
+     * The array is indexed by license identifiers, which contain
+     * a numerically indexed array with license details.
+     *
+     *  [ license identifier =>
+     *      [ 0 => full name (string), 1 => osi certified (bool) ]
+     *    , ...
+     *  ]
+     *
+     * @var array
+     */
     private $licenses;
 
-    /** @var array */
+    /**
+     * Contains all the license exceptions.
+     *
+     * The array is indexed by license exception identifiers, which contain
+     * a numerically indexed array with license exception details.
+     *
+     *  [ exception identifier =>
+     *      [ 0 => full name (string) ]
+     *    , ...
+     *  ]
+     *
+     * @var array
+     */
     private $exceptions;
 
     public function __construct()
@@ -27,6 +51,11 @@ class SpdxLicense
 
     /**
      * Returns license metadata by license identifier.
+     *
+     * This function adds a link to the full license text to the license metadata.
+     * The array returned is in the form of:
+     *
+     *  [ 0 => full name (string), 1 => osi certified, 2 => link to license text (string) ]
      *
      * @param string $identifier
      *
@@ -47,6 +76,11 @@ class SpdxLicense
     /**
      * Returns license exception metadata by license exception identifier.
      *
+     * This function adds a link to the full license exception text to the license exception metadata.
+     * The array returned is in the form of:
+     *
+     *  [ 0 => full name (string), 1 => link to license text (string) ]
+     *
      * @param string $identifier
      *
      * @return array|null
@@ -64,22 +98,22 @@ class SpdxLicense
     }
 
     /**
-     * Returns the short identifier of a license (exception) by full name.
+     * Returns the short identifier of a license (or license exception) by full name.
      *
      * @param string $name
      *
-     * @return string
+     * @return string|null
      */
     public function getIdentifierByName($name)
     {
         foreach ($this->licenses as $identifier => $licenseData) {
-            if ($licenseData[0] === $name) { // key 0 = fullname
+            if ($licenseData[0] === $name) {
                 return $identifier;
             }
         }
 
         foreach ($this->exceptions as $identifier => $licenseData) {
-            if ($licenseData[0] === $name) { // key 0 = fullname
+            if ($licenseData[0] === $name) {
                 return $identifier;
             }
         }
@@ -94,11 +128,11 @@ class SpdxLicense
      */
     public function isOsiApprovedByIdentifier($identifier)
     {
-        return $this->licenses[$identifier][1]; // key 1 = osi approved
+        return $this->licenses[$identifier][1];
     }
 
     /**
-     * Check, if the identifier for a license is valid.
+     * Check if the identifier for a license is valid.
      *
      * @param string $identifier
      *
