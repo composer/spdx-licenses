@@ -69,27 +69,23 @@ class SpdxLicensesUpdater
         $licenses = array();
 
         $dom = new \DOMDocument();
-        @$dom->loadHTMLFile($url);
+        @$dom->loadHTMLFile($url); /* use silence operator to ignore warnings about invalid dom content */
 
         $xPath = new \DOMXPath($dom);
         $trs = $xPath->query('//table//tbody//tr');
 
-        // iterate over each row in the table
+        /** @var \DOMElement $tr */
         foreach ($trs as $tr) {
-            $tds = $tr->getElementsByTagName('td'); // get the columns in this row
+            $tds = $tr->getElementsByTagName('td');
 
             if ($tds->length !== 4) {
                 continue;
             }
 
-            if (trim($tds->item(3)->nodeValue) === 'License Text') {
+            if ('License Text' === trim($tds->item(3)->nodeValue)) {
                 $fullname = trim($tds->item(0)->nodeValue);
                 $identifier = trim($tds->item(1)->nodeValue);
                 $osiApproved = ((isset($tds->item(2)->nodeValue) && $tds->item(2)->nodeValue === 'Y')) ? true : false;
-
-                // The license URL is not scraped intentionally to keep json file size low.
-                // It's build when requested, see SpdxLicenses->getLicenseByIdentifier().
-                //$licenseURL = $tds->item(3)->getAttribute('href');
 
                 $licenses += array($identifier => array($fullname, $osiApproved));
             }
@@ -108,26 +104,22 @@ class SpdxLicensesUpdater
         $exceptions = array();
 
         $dom = new \DOMDocument();
-        @$dom->loadHTMLFile($url);
+        @$dom->loadHTMLFile($url); /* use silence operator to ignore warnings about invalid dom content */
 
         $xPath = new \DOMXPath($dom);
         $trs = $xPath->query('//table//tbody//tr');
 
-        // iterate over each row in the table
+        /** @var \DOMElement $tr */
         foreach ($trs as $tr) {
-            $tds = $tr->getElementsByTagName('td'); // get the columns in this row
+            $tds = $tr->getElementsByTagName('td');
 
             if ($tds->length !== 3) {
                 continue;
             }
 
-            if (trim($tds->item(2)->nodeValue) === 'License Exception Text') {
+            if ('License Exception Text' === trim($tds->item(2)->nodeValue)) {
                 $fullname = trim($tds->item(0)->nodeValue);
                 $identifier = trim($tds->item(1)->nodeValue);
-
-                // The license URL is not scraped intentionally to keep json file size low.
-                // It's build when requested, see SpdxLicenses->getLicenseExceptionByIdentifier().
-                //$licenseURL = $tds->item(2)->getAttribute('href');
 
                 $exceptions += array($identifier => array($fullname));
             }
