@@ -83,7 +83,7 @@ class SpdxLicensesTest extends \PHPUnit_Framework_TestCase
      */
     public static function provideValidLicenses()
     {
-        $json = file_get_contents(__DIR__ . '/../res/spdx-licenses.json');
+        $json = file_get_contents(SpdxLicenses::getResourcesDir() . '/spdx-licenses.json');
         $licenses = json_decode($json, true);
         $identifiers = array_keys($licenses);
 

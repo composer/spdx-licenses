@@ -167,10 +167,18 @@ class SpdxLicenses
         return $this->isValidLicenseString($license);
     }
 
+    /**
+     * @return string
+     */
+    public static function getResourcesDir()
+    {
+        return dirname(__DIR__) . '/res/';
+    }
+
     private function loadLicenses()
     {
         if (null === $this->licenses) {
-            $jsonFile = file_get_contents(__DIR__ . '/../res/spdx-licenses.json');
+            $jsonFile = file_get_contents(self::getResourcesDir() . 'spdx-licenses.json');
             $this->licenses = json_decode($jsonFile, true);
         }
     }
@@ -178,7 +186,7 @@ class SpdxLicenses
     private function loadExceptions()
     {
         if (null === $this->exceptions) {
-            $jsonFile = file_get_contents(__DIR__ . '/../res/spdx-exceptions.json');
+            $jsonFile = file_get_contents(self::getResourcesDir() . 'spdx-exceptions.json');
             $this->exceptions = json_decode($jsonFile, true);
         }
     }
