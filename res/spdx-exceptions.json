@@ -11,11 +11,14 @@
     "Bison-exception-2.2": [
         "Bison exception 2.2"
     ],
+    "Classpath-exception-2.0": [
+        "Classpath exception 2.0"
+    ],
     "CLISP-exception-2.0": [
         "CLISP exception 2.0"
     ],
-    "Classpath-exception-2.0": [
-        "Classpath exception 2.0"
+    "eCos-exception-2.0": [
+        "eCos exception 2.0"
     ],
     "FLTK-exception": [
         "FLTK exception"
@@ -26,32 +29,14 @@
     "Font-exception-2.0": [
         "Font exception 2.0"
     ],
+    "freertos-exception-2.0": [
+        "FreeRTOS Exception 2.0"
+    ],
     "GCC-exception-2.0": [
         "GCC Runtime Library exception 2.0"
     ],
     "GCC-exception-3.1": [
         "GCC Runtime Library exception 3.1"
-    ],
-    "LZMA-exception": [
-        "LZMA exception"
-    ],
-    "Libtool-exception": [
-        "Libtool Exception"
-    ],
-    "Nokia-Qt-exception-1.1": [
-        "Nokia Qt LGPL exception 1.1"
-    ],
-    "Qwt-exception-1.0": [
-        "Qwt exception 1.0"
-    ],
-    "WxWindows-exception-3.1": [
-        "WxWindows Library Exception 3.1"
-    ],
-    "eCos-exception-2.0": [
-        "eCos exception 2.0"
-    ],
-    "freertos-exception-2.0": [
-        "FreeRTOS Exception 2.0"
     ],
     "gnu-javamail-exception": [
         "GNU JavaMail exception"
@@ -59,10 +44,25 @@
     "i2p-gpl-java-exception": [
         "i2p GPL+Java Exception"
     ],
+    "Libtool-exception": [
+        "Libtool Exception"
+    ],
+    "LZMA-exception": [
+        "LZMA exception"
+    ],
     "mif-exception": [
         "Macros and Inline Functions Exception"
     ],
+    "Nokia-Qt-exception-1.1": [
+        "Nokia Qt LGPL exception 1.1"
+    ],
+    "Qwt-exception-1.0": [
+        "Qwt exception 1.0"
+    ],
     "u-boot-exception-2.0": [
         "U-Boot exception 2.0"
+    ],
+    "WxWindows-exception-3.1": [
+        "WxWindows Library Exception 3.1"
     ]
 }

@@ -3,6 +3,18 @@
         "Attribution Assurance License",
         true
     ],
+    "Abstyles": [
+        "Abstyles License",
+        false
+    ],
+    "Adobe-2006": [
+        "Adobe Systems Incorporated Source Code License Agreement",
+        false
+    ],
+    "Adobe-Glyph": [
+        "Adobe Glyph List License",
+        false
+    ],
     "ADSL": [
         "Amazon Digital Services License",
         false
@@ -27,6 +39,10 @@
         "Academic Free License v3.0",
         true
     ],
+    "Afmparse": [
+        "Afmparse License",
+        false
+    ],
     "AGPL-1.0": [
         "Affero General Public License v1.0",
         false
@@ -34,6 +50,10 @@
     "AGPL-3.0": [
         "GNU Affero General Public License v3.0",
         true
+    ],
+    "Aladdin": [
+        "Aladdin Free Public License",
+        false
     ],
     "AMDPLPA": [
         "AMD's plpa_map.c License",
@@ -50,6 +70,18 @@
     "ANTLR-PD": [
         "ANTLR Software Rights Notice",
         false
+    ],
+    "Apache-1.0": [
+        "Apache License 1.0",
+        false
+    ],
+    "Apache-1.1": [
+        "Apache License 1.1",
+        true
+    ],
+    "Apache-2.0": [
+        "Apache License 2.0",
+        true
     ],
     "APAFML": [
         "Adobe Postscript AFM License",
@@ -75,53 +107,45 @@
         "Apple Public Source License 2.0",
         true
     ],
-    "Abstyles": [
-        "Abstyles License",
-        false
-    ],
-    "Adobe-2006": [
-        "Adobe Systems Incorporated Source Code License Agreement",
-        false
-    ],
-    "Adobe-Glyph": [
-        "Adobe Glyph List License",
-        false
-    ],
-    "Afmparse": [
-        "Afmparse License",
-        false
-    ],
-    "Aladdin": [
-        "Aladdin Free Public License",
-        false
-    ],
-    "Apache-1.0": [
-        "Apache License 1.0",
-        false
-    ],
-    "Apache-1.1": [
-        "Apache License 1.1",
-        true
-    ],
-    "Apache-2.0": [
-        "Apache License 2.0",
-        true
-    ],
     "Artistic-1.0": [
         "Artistic License 1.0",
-        true
-    ],
-    "Artistic-1.0-Perl": [
-        "Artistic License 1.0 (Perl)",
         true
     ],
     "Artistic-1.0-cl8": [
         "Artistic License 1.0 w/clause 8",
         true
     ],
+    "Artistic-1.0-Perl": [
+        "Artistic License 1.0 (Perl)",
+        true
+    ],
     "Artistic-2.0": [
         "Artistic License 2.0",
         true
+    ],
+    "Bahyph": [
+        "Bahyph License",
+        false
+    ],
+    "Barr": [
+        "Barr License",
+        false
+    ],
+    "Beerware": [
+        "Beerware License",
+        false
+    ],
+    "BitTorrent-1.0": [
+        "BitTorrent Open Source License v1.0",
+        false
+    ],
+    "BitTorrent-1.1": [
+        "BitTorrent Open Source License v1.1",
+        false
+    ],
+    "Borceux": [
+        "Borceux license",
+        false
     ],
     "BSD-2-Clause": [
         "BSD 2-clause \"Simplified\" License",
@@ -167,28 +191,16 @@
         "Boost Software License 1.0",
         true
     ],
-    "Bahyph": [
-        "Bahyph License",
+    "bzip2-1.0.5": [
+        "bzip2 and libbzip2 License v1.0.5",
         false
     ],
-    "Barr": [
-        "Barr License",
+    "bzip2-1.0.6": [
+        "bzip2 and libbzip2 License v1.0.6",
         false
     ],
-    "Beerware": [
-        "Beerware License",
-        false
-    ],
-    "BitTorrent-1.0": [
-        "BitTorrent Open Source License v1.0",
-        false
-    ],
-    "BitTorrent-1.1": [
-        "BitTorrent Open Source License v1.1",
-        false
-    ],
-    "Borceux": [
-        "Borceux license",
+    "Caldera": [
+        "Caldera License",
         false
     ],
     "CATOSL-1.1": [
@@ -347,6 +359,10 @@
         "CeCILL-C Free Software License Agreement",
         false
     ],
+    "ClArtistic": [
+        "Clarified Artistic License",
+        false
+    ],
     "CNRI-Jython": [
         "CNRI Jython License",
         false
@@ -357,6 +373,10 @@
     ],
     "CNRI-Python-GPL-Compatible": [
         "CNRI Python Open Source GPL Compatible License Agreement",
+        false
+    ],
+    "Condor-1.1": [
+        "Condor Public License v1.1",
         false
     ],
     "CPAL-1.0": [
@@ -371,25 +391,13 @@
         "Code Project Open License 1.02",
         false
     ],
-    "CUA-OPL-1.0": [
-        "CUA Office Public License v1.0",
-        true
-    ],
-    "Caldera": [
-        "Caldera License",
-        false
-    ],
-    "ClArtistic": [
-        "Clarified Artistic License",
-        false
-    ],
-    "Condor-1.1": [
-        "Condor Public License v1.1",
-        false
-    ],
     "Crossword": [
         "Crossword License",
         false
+    ],
+    "CUA-OPL-1.0": [
+        "CUA Office Public License v1.0",
+        true
     ],
     "Cube": [
         "Cube License",
@@ -399,16 +407,24 @@
         "Deutsche Freie Software Lizenz",
         false
     ],
+    "diffmark": [
+        "diffmark license",
+        false
+    ],
     "DOC": [
         "DOC License",
+        false
+    ],
+    "Dotseqn": [
+        "Dotseqn License",
         false
     ],
     "DSDP": [
         "DSDP License",
         false
     ],
-    "Dotseqn": [
-        "Dotseqn License",
+    "dvipdfm": [
+        "dvipdfm License",
         false
     ],
     "ECL-1.0": [
@@ -427,9 +443,21 @@
         "Eiffel Forum License v2.0",
         true
     ],
+    "eGenix": [
+        "eGenix.com Public License 1.1.0",
+        false
+    ],
+    "Entessa": [
+        "Entessa Public License v1.0",
+        true
+    ],
     "EPL-1.0": [
         "Eclipse Public License 1.0",
         true
+    ],
+    "ErlPL-1.1": [
+        "Erlang Public License v1.1",
+        false
     ],
     "EUDatagrid": [
         "EU DataGrid Software License",
@@ -443,28 +471,8 @@
         "European Union Public License 1.1",
         true
     ],
-    "Entessa": [
-        "Entessa Public License v1.0",
-        true
-    ],
-    "ErlPL-1.1": [
-        "Erlang Public License v1.1",
-        false
-    ],
     "Eurosym": [
         "Eurosym License",
-        false
-    ],
-    "FSFUL": [
-        "FSF Unlimited License",
-        false
-    ],
-    "FSFULLR": [
-        "FSF Unlimited License (with License Retention)",
-        false
-    ],
-    "FTL": [
-        "Freetype Project License",
         false
     ],
     "Fair": [
@@ -479,6 +487,18 @@
         "FreeImage Public License v1.0",
         false
     ],
+    "FSFUL": [
+        "FSF Unlimited License",
+        false
+    ],
+    "FSFULLR": [
+        "FSF Unlimited License (with License Retention)",
+        false
+    ],
+    "FTL": [
+        "Freetype Project License",
+        false
+    ],
     "GFDL-1.1": [
         "GNU Free Documentation License v1.1",
         false
@@ -491,8 +511,24 @@
         "GNU Free Documentation License v1.3",
         false
     ],
+    "Giftware": [
+        "Giftware License",
+        false
+    ],
     "GL2PS": [
         "GL2PS License",
+        false
+    ],
+    "Glide": [
+        "3dfx Glide License",
+        false
+    ],
+    "Glulxe": [
+        "Glulxe License",
+        false
+    ],
+    "gnuplot": [
+        "gnuplot License",
         false
     ],
     "GPL-1.0": [
@@ -507,25 +543,17 @@
         "GNU General Public License v3.0 only",
         true
     ],
-    "Giftware": [
-        "Giftware License",
+    "gSOAP-1.3b": [
+        "gSOAP Public License v1.3b",
         false
     ],
-    "Glide": [
-        "3dfx Glide License",
-        false
-    ],
-    "Glulxe": [
-        "Glulxe License",
+    "HaskellReport": [
+        "Haskell Language Report License",
         false
     ],
     "HPND": [
         "Historic Permission Notice and Disclaimer",
         true
-    ],
-    "HaskellReport": [
-        "Haskell Language Report License",
-        false
     ],
     "IBM-pibs": [
         "IBM PowerPC Initialization and Boot Software",
@@ -539,20 +567,12 @@
         "Independent JPEG Group License",
         false
     ],
-    "IPA": [
-        "IPA Font License",
-        true
-    ],
-    "IPL-1.0": [
-        "IBM Public License v1.0",
-        true
-    ],
-    "ISC": [
-        "ISC License",
-        true
-    ],
     "ImageMagick": [
         "ImageMagick License",
+        false
+    ],
+    "iMatix": [
+        "iMatix Standard Function Library Agreement",
         false
     ],
     "Imlib2": [
@@ -567,12 +587,32 @@
         "Intel ACPI Software License Agreement",
         false
     ],
+    "IPA": [
+        "IPA Font License",
+        true
+    ],
+    "IPL-1.0": [
+        "IBM Public License v1.0",
+        true
+    ],
+    "ISC": [
+        "ISC License",
+        true
+    ],
+    "JasPer-2.0": [
+        "JasPer License",
+        false
+    ],
     "JSON": [
         "JSON License",
         false
     ],
-    "JasPer-2.0": [
-        "JasPer License",
+    "Latex2e": [
+        "Latex2e License",
+        false
+    ],
+    "Leptonica": [
+        "Leptonica License",
         false
     ],
     "LGPL-2.0": [
@@ -589,6 +629,14 @@
     ],
     "LGPLLR": [
         "Lesser General Public License For Linguistic Resources",
+        false
+    ],
+    "Libpng": [
+        "libpng License",
+        false
+    ],
+    "libtiff": [
+        "libtiff License",
         false
     ],
     "LPL-1.0": [
@@ -619,28 +667,24 @@
         "LaTeX Project Public License v1.3c",
         true
     ],
-    "Latex2e": [
-        "Latex2e License",
+    "MakeIndex": [
+        "MakeIndex License",
         false
     ],
-    "Leptonica": [
-        "Leptonica License",
-        false
-    ],
-    "Libpng": [
-        "libpng License",
-        false
+    "MirOS": [
+        "MirOS Licence",
+        true
     ],
     "MIT": [
         "MIT License",
         true
     ],
-    "MIT-CMU": [
-        "CMU License",
-        false
-    ],
     "MIT-advertising": [
         "Enlightenment License (e16)",
+        false
+    ],
+    "MIT-CMU": [
+        "CMU License",
         false
     ],
     "MIT-enna": [
@@ -653,6 +697,14 @@
     ],
     "MITNFA": [
         "MIT +no-false-attribs license",
+        false
+    ],
+    "Motosoto": [
+        "Motosoto License",
+        true
+    ],
+    "mpich2": [
+        "mpich2 License",
         false
     ],
     "MPL-1.0": [
@@ -683,18 +735,6 @@
         "Matrix Template Library License",
         false
     ],
-    "MakeIndex": [
-        "MakeIndex License",
-        false
-    ],
-    "MirOS": [
-        "MirOS Licence",
-        true
-    ],
-    "Motosoto": [
-        "Motosoto License",
-        true
-    ],
     "Multics": [
         "Multics License",
         true
@@ -707,6 +747,10 @@
         "NASA Open Source Agreement 1.3",
         true
     ],
+    "Naumen": [
+        "Naumen Public License",
+        true
+    ],
     "NBPL-1.0": [
         "Net Boolean Public License v1",
         false
@@ -714,6 +758,14 @@
     "NCSA": [
         "University of Illinois/NCSA Open Source License",
         true
+    ],
+    "NetCDF": [
+        "NetCDF license",
+        false
+    ],
+    "Newsletr": [
+        "Newsletr License",
+        false
     ],
     "NGPL": [
         "Nethack General Public License",
@@ -723,8 +775,16 @@
         "No Limit Public License",
         false
     ],
+    "Nokia": [
+        "Nokia Open Source License",
+        true
+    ],
     "NOSL": [
         "Netizen Open Source License",
+        false
+    ],
+    "Noweb": [
+        "Noweb License",
         false
     ],
     "NPL-1.0": [
@@ -746,26 +806,6 @@
     "NTP": [
         "NTP License",
         true
-    ],
-    "Naumen": [
-        "Naumen Public License",
-        true
-    ],
-    "NetCDF": [
-        "NetCDF license",
-        false
-    ],
-    "Newsletr": [
-        "Newsletr License",
-        false
-    ],
-    "Nokia": [
-        "Nokia Open Source License",
-        true
-    ],
-    "Noweb": [
-        "Noweb License",
-        false
     ],
     "Nunit": [
         "Nunit License",
@@ -859,6 +899,10 @@
         "Open Market License",
         false
     ],
+    "OpenSSL": [
+        "OpenSSL License",
+        false
+    ],
     "OPL-1.0": [
         "Open Public License v1.0",
         false
@@ -883,10 +927,6 @@
         "Open Software License 3.0",
         true
     ],
-    "OpenSSL": [
-        "OpenSSL License",
-        false
-    ],
     "PDDL-1.0": [
         "ODC Public Domain Dedication & License 1.0",
         false
@@ -907,16 +947,28 @@
         "PostgreSQL License",
         true
     ],
+    "psfrag": [
+        "psfrag License",
+        false
+    ],
+    "psutils": [
+        "psutils License",
+        false
+    ],
     "Python-2.0": [
         "Python License 2.0",
         true
+    ],
+    "Qhull": [
+        "Qhull License",
+        false
     ],
     "QPL-1.0": [
         "Q Public License 1.0",
         true
     ],
-    "Qhull": [
-        "Qhull License",
+    "Rdisc": [
+        "Rdisc License",
         false
     ],
     "RHeCos-1.1": [
@@ -943,16 +995,16 @@
         "Ricoh Source Code Public License",
         true
     ],
-    "Rdisc": [
-        "Rdisc License",
-        false
-    ],
     "Ruby": [
         "Ruby License",
         false
     ],
     "SAX-PD": [
         "Sax Public Domain Notice",
+        false
+    ],
+    "Saxpath": [
+        "Saxpath License",
         false
     ],
     "SCEA": [
@@ -971,6 +1023,10 @@
         "SGI Free Software License B v2.0",
         false
     ],
+    "SimPL-2.0": [
+        "Simple Public License 2.0",
+        true
+    ],
     "SISSL": [
         "Sun Industry Standards Source License v1.1",
         true
@@ -979,6 +1035,10 @@
         "Sun Industry Standards Source License v1.2",
         false
     ],
+    "Sleepycat": [
+        "Sleepycat License",
+        true
+    ],
     "SMLNJ": [
         "Standard ML of New Jersey License",
         false
@@ -986,26 +1046,6 @@
     "SNIA": [
         "SNIA Public License 1.1",
         false
-    ],
-    "SPL-1.0": [
-        "Sun Public License v1.0",
-        true
-    ],
-    "SWL": [
-        "Scheme Widget Library (SWL) Software License Agreement",
-        false
-    ],
-    "Saxpath": [
-        "Saxpath License",
-        false
-    ],
-    "SimPL-2.0": [
-        "Simple Public License 2.0",
-        true
-    ],
-    "Sleepycat": [
-        "Sleepycat License",
-        true
     ],
     "Spencer-86": [
         "Spencer License 86",
@@ -1019,8 +1059,16 @@
         "Spencer License 99",
         false
     ],
+    "SPL-1.0": [
+        "Sun Public License v1.0",
+        true
+    ],
     "SugarCRM-1.1.3": [
         "SugarCRM Public License v1.1.3",
+        false
+    ],
+    "SWL": [
+        "Scheme Widget Library (SWL) Software License Agreement",
         false
     ],
     "TCL": [
@@ -1039,16 +1087,20 @@
         "Trusster Open Source License",
         false
     ],
-    "UPL-1.0": [
-        "Universal Permissive License v1.0",
-        true
-    ],
     "Unicode-TOU": [
         "Unicode Terms of Use",
         false
     ],
     "Unlicense": [
         "The Unlicense",
+        false
+    ],
+    "UPL-1.0": [
+        "Universal Permissive License v1.0",
+        true
+    ],
+    "Vim": [
+        "Vim License",
         false
     ],
     "VOSTROM": [
@@ -1059,20 +1111,12 @@
         "Vovida Software License v1.0",
         true
     ],
-    "Vim": [
-        "Vim License",
-        false
-    ],
     "W3C": [
         "W3C Software Notice and License (2002-12-31)",
         true
     ],
     "W3C-19980720": [
         "W3C Software Notice and License (1998-07-20)",
-        false
-    ],
-    "WTFPL": [
-        "Do What The F*ck You Want To Public License",
         false
     ],
     "Watcom-1.0": [
@@ -1083,25 +1127,37 @@
         "Wsuipa License",
         false
     ],
+    "WTFPL": [
+        "Do What The F*ck You Want To Public License",
+        false
+    ],
     "X11": [
         "X11 License",
-        false
-    ],
-    "XFree86-1.1": [
-        "XFree86 License 1.1",
-        false
-    ],
-    "XSkat": [
-        "XSkat License",
         false
     ],
     "Xerox": [
         "Xerox License",
         false
     ],
+    "XFree86-1.1": [
+        "XFree86 License 1.1",
+        false
+    ],
+    "xinetd": [
+        "xinetd License",
+        false
+    ],
     "Xnet": [
         "X.Net License",
         true
+    ],
+    "xpp": [
+        "XPP License",
+        false
+    ],
+    "XSkat": [
+        "XSkat License",
+        false
     ],
     "YPL-1.0": [
         "Yahoo! Public License v1.0",
@@ -1109,18 +1165,6 @@
     ],
     "YPL-1.1": [
         "Yahoo! Public License v1.1",
-        false
-    ],
-    "ZPL-1.1": [
-        "Zope Public License 1.1",
-        false
-    ],
-    "ZPL-2.0": [
-        "Zope Public License 2.0",
-        true
-    ],
-    "ZPL-2.1": [
-        "Zope Public License 2.1",
         false
     ],
     "Zed": [
@@ -1143,64 +1187,20 @@
         "zlib License",
         true
     ],
-    "bzip2-1.0.5": [
-        "bzip2 and libbzip2 License v1.0.5",
-        false
-    ],
-    "bzip2-1.0.6": [
-        "bzip2 and libbzip2 License v1.0.6",
-        false
-    ],
-    "diffmark": [
-        "diffmark license",
-        false
-    ],
-    "dvipdfm": [
-        "dvipdfm License",
-        false
-    ],
-    "eGenix": [
-        "eGenix.com Public License 1.1.0",
-        false
-    ],
-    "gSOAP-1.3b": [
-        "gSOAP Public License v1.3b",
-        false
-    ],
-    "gnuplot": [
-        "gnuplot License",
-        false
-    ],
-    "iMatix": [
-        "iMatix Standard Function Library Agreement",
-        false
-    ],
-    "libtiff": [
-        "libtiff License",
-        false
-    ],
-    "mpich2": [
-        "mpich2 License",
-        false
-    ],
-    "psfrag": [
-        "psfrag License",
-        false
-    ],
-    "psutils": [
-        "psutils License",
-        false
-    ],
-    "xinetd": [
-        "xinetd License",
-        false
-    ],
-    "xpp": [
-        "XPP License",
-        false
-    ],
     "zlib-acknowledgement": [
         "zlib/libpng License with Acknowledgement",
+        false
+    ],
+    "ZPL-1.1": [
+        "Zope Public License 1.1",
+        false
+    ],
+    "ZPL-2.0": [
+        "Zope Public License 2.0",
+        true
+    ],
+    "ZPL-2.1": [
+        "Zope Public License 2.1",
         false
     ]
 }

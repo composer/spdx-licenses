@@ -99,7 +99,7 @@ class SpdxLicensesUpdater
             }
         }
 
-        ksort($licenses);
+        uksort($licenses, 'strcasecmp');
 
         return $licenses;
     }
@@ -135,7 +135,7 @@ class SpdxLicensesUpdater
             }
         }
 
-        ksort($exceptions);
+        uksort($exceptions, 'strcasecmp');
 
         return $exceptions;
     }
