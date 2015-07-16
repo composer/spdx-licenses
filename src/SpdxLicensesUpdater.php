@@ -99,6 +99,8 @@ class SpdxLicensesUpdater
             }
         }
 
+        ksort($licenses);
+
         return $licenses;
     }
 
@@ -132,6 +134,8 @@ class SpdxLicensesUpdater
                 $exceptions += array($identifier => array($fullname));
             }
         }
+
+        ksort($exceptions);
 
         return $exceptions;
     }
