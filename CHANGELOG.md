@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### [Unreleased]
 
+  * Changed: ran the updater, various licenses and exceptions were added, some removed
   * Changed: updater now sorts licenses and exceptions by key
   * Changed: filenames now class constants of SpdxLicenses (`LICENSES_FILE` and `EXCEPTIONS_FILE`)
   * Changed: resources directory now available via static method SpdxLicenses::getResourcesDir()
