@@ -53,6 +53,14 @@ class SpdxLicensesTest extends \PHPUnit_Framework_TestCase
         $this->license->validate($invalidArgument);
     }
 
+    public function testGetResourcesDir()
+    {
+        $dir = SpdxLicenses::getResourcesDir();
+        $this->assertTrue(is_dir($dir));
+        $this->assertTrue(is_file($dir . 'spdx-licenses.json'));
+        $this->assertTrue(is_file($dir . 'spdx-exceptions.json'));
+    }
+
     public function testGetLicenseByIdentifier()
     {
         $license = $this->license->getLicenseByIdentifier('AGPL-1.0');
