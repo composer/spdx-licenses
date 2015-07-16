@@ -13,6 +13,8 @@ namespace Composer\Spdx;
 
 class SpdxLicenses
 {
+    const LICENSES_FILE = 'spdx-licenses.json';
+    const EXCEPTIONS_FILE = 'spdx-exceptions.json';
     /**
      * Contains all the licenses.
      *
@@ -172,13 +174,13 @@ class SpdxLicenses
      */
     public static function getResourcesDir()
     {
-        return dirname(__DIR__) . '/res/';
+        return dirname(__DIR__) . '/res';
     }
 
     private function loadLicenses()
     {
         if (null === $this->licenses) {
-            $jsonFile = file_get_contents(self::getResourcesDir() . 'spdx-licenses.json');
+            $jsonFile = file_get_contents(self::getResourcesDir() . '/' . self::LICENSES_FILE);
             $this->licenses = json_decode($jsonFile, true);
         }
     }
@@ -186,7 +188,7 @@ class SpdxLicenses
     private function loadExceptions()
     {
         if (null === $this->exceptions) {
-            $jsonFile = file_get_contents(self::getResourcesDir() . 'spdx-exceptions.json');
+            $jsonFile = file_get_contents(self::getResourcesDir() . '/' . self::EXCEPTIONS_FILE);
             $this->exceptions = json_decode($jsonFile, true);
         }
     }

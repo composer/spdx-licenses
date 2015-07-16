@@ -57,8 +57,8 @@ class SpdxLicensesTest extends \PHPUnit_Framework_TestCase
     {
         $dir = SpdxLicenses::getResourcesDir();
         $this->assertTrue(is_dir($dir));
-        $this->assertTrue(is_file($dir . 'spdx-licenses.json'));
-        $this->assertTrue(is_file($dir . 'spdx-exceptions.json'));
+        $this->assertTrue(is_file($dir . '/' . SpdxLicenses::LICENSES_FILE), $dir . SpdxLicenses::LICENSES_FILE. ' not a file');
+        $this->assertTrue(is_file($dir . '/' . SpdxLicenses::EXCEPTIONS_FILE), $dir . SpdxLicenses::EXCEPTIONS_FILE . ' not a file');
     }
 
     public function testGetLicenseByIdentifier()
@@ -91,7 +91,7 @@ class SpdxLicensesTest extends \PHPUnit_Framework_TestCase
      */
     public static function provideValidLicenses()
     {
-        $json = file_get_contents(SpdxLicenses::getResourcesDir() . '/spdx-licenses.json');
+        $json = file_get_contents(SpdxLicenses::getResourcesDir() . '/' . SpdxLicenses::LICENSES_FILE);
         $licenses = json_decode($json, true);
         $identifiers = array_keys($licenses);
 
