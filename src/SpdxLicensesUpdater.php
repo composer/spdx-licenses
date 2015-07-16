@@ -23,8 +23,12 @@ class SpdxLicensesUpdater
      * @param string $file
      * @param string $url
      */
-    public function dumpLicenses($file, $url = 'https://spdx.org/licenses/index.html')
+    public function dumpLicenses($file = null, $url = 'https://spdx.org/licenses/index.html')
     {
+        if (null === $file) {
+            $file = SpdxLicenses::getResourcesDir() . '/' . SpdxLicenses::LICENSES_FILE;
+        }
+
         $options = 0;
 
         if (defined('JSON_PRETTY_PRINT')) {
@@ -43,8 +47,12 @@ class SpdxLicensesUpdater
      * @param string $file
      * @param string $url
      */
-    public function dumpExceptions($file, $url = 'https://spdx.org/licenses/exceptions-index.html')
+    public function dumpExceptions($file = null, $url = 'https://spdx.org/licenses/exceptions-index.html')
     {
+        if (null === $file) {
+            $file = SpdxLicenses::getResourcesDir() . '/' . SpdxLicenses::EXCEPTIONS_FILE;
+        }
+
         $options = 0;
 
         if (defined('JSON_PRETTY_PRINT')) {

@@ -6,5 +6,5 @@ require __DIR__ . '/../vendor/autoload.php';
 use Composer\Spdx\SpdxLicensesUpdater;
 
 $updater = new SpdxLicensesUpdater;
-$updater->dumpLicenses(__DIR__ . '/../res/spdx-licenses.json');
-$updater->dumpExceptions(__DIR__ . '/../res/spdx-exceptions.json');
+$updater->dumpLicenses();
+$updater->dumpExceptions();

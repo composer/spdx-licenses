@@ -53,6 +53,14 @@ class SpdxLicensesTest extends \PHPUnit_Framework_TestCase
         $this->license->validate($invalidArgument);
     }
 
+    public function testGetResourcesDir()
+    {
+        $dir = SpdxLicenses::getResourcesDir();
+        $this->assertTrue(is_dir($dir));
+        $this->assertTrue(is_file($dir . '/' . SpdxLicenses::LICENSES_FILE));
+        $this->assertTrue(is_file($dir . '/' . SpdxLicenses::EXCEPTIONS_FILE));
+    }
+
     public function testGetLicenseByIdentifier()
     {
         $license = $this->license->getLicenseByIdentifier('AGPL-1.0');
@@ -83,7 +91,7 @@ class SpdxLicensesTest extends \PHPUnit_Framework_TestCase
      */
     public static function provideValidLicenses()
     {
-        $json = file_get_contents(__DIR__ . '/../res/spdx-licenses.json');
+        $json = file_get_contents(SpdxLicenses::getResourcesDir() . '/' . SpdxLicenses::LICENSES_FILE);
         $licenses = json_decode($json, true);
         $identifiers = array_keys($licenses);
 
