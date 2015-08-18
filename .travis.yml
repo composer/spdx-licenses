@@ -21,9 +21,11 @@ php:
 matrix:
   fast_finish: true
 
-before_script:
-  - rm -f ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/xdebug.ini
-  - composer install --no-interaction --no-progress --prefer-dist
+before_install:
+  - composer self-update -vvv --no-interaction
+
+install:
+  - composer install -vvv --no-interaction --no-progress --prefer-dist
 
 script:
   - vendor/bin/phpunit

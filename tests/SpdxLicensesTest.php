@@ -56,9 +56,55 @@ class SpdxLicensesTest extends \PHPUnit_Framework_TestCase
     public function testGetResourcesDir()
     {
         $dir = SpdxLicenses::getResourcesDir();
+
         $this->assertTrue(is_dir($dir));
-        $this->assertTrue(is_file($dir . '/' . SpdxLicenses::LICENSES_FILE));
-        $this->assertTrue(is_file($dir . '/' . SpdxLicenses::EXCEPTIONS_FILE));
+        $this->assertEquals(realpath($dir), realpath(__DIR__ . '/../res'));
+    }
+
+    /**
+     * @dataProvider provideResourceFiles
+     * @param string $file
+     */
+    public function testResourceFilesExist($file)
+    {
+        $this->assertFileExists(SpdxLicenses::getResourcesDir() . '/' . $file);
+    }
+
+    /**
+     * @dataProvider provideResourceFiles
+     * @param string $file
+     */
+    public function testResourceFilesContainJson($file)
+    {
+        $json = json_decode(file_get_contents(SpdxLicenses::getResourcesDir() . '/' . $file));
+
+        if (null === $json && json_last_error()) {
+            switch (json_last_error()) {
+                case JSON_ERROR_NONE:
+                    $error = ' - no errors';
+                    break;
+                case JSON_ERROR_DEPTH:
+                    $error = ' - maximum stack depth exceeded';
+                    break;
+                case JSON_ERROR_STATE_MISMATCH:
+                    $error = ' - underflow or the modes mismatch';
+                    break;
+                case JSON_ERROR_CTRL_CHAR:
+                    $error = ' - unexpected control character found';
+                    break;
+                case JSON_ERROR_SYNTAX:
+                    $error = ' - syntax error, malformed JSON';
+                    break;
+                case JSON_ERROR_UTF8:
+                    $error = ' - malformed UTF-8 characters, possibly incorrectly encoded';
+                    break;
+                default:
+                    $error = ' - unknown error';
+                    break;
+            }
+
+            $this->fail('Could not decode JSON within ' . $file . $error);
+        }
     }
 
     public function testGetLicenseByIdentifier()
@@ -89,7 +135,18 @@ class SpdxLicensesTest extends \PHPUnit_Framework_TestCase
     /**
      * @return array
      */
-    public static function provideValidLicenses()
+    public function provideResourceFiles()
+    {
+        return array(
+            array(SpdxLicenses::LICENSES_FILE),
+            array(SpdxLicenses::EXCEPTIONS_FILE),
+        );
+    }
+
+    /**
+     * @return array
+     */
+    public function provideValidLicenses()
     {
         $json = file_get_contents(SpdxLicenses::getResourcesDir() . '/' . SpdxLicenses::LICENSES_FILE);
         $licenses = json_decode($json, true);
@@ -127,7 +184,7 @@ class SpdxLicensesTest extends \PHPUnit_Framework_TestCase
     /**
      * @return array
      */
-    public static function provideInvalidLicenses()
+    public function provideInvalidLicenses()
     {
         return array(
             array(''),
@@ -157,7 +214,7 @@ class SpdxLicensesTest extends \PHPUnit_Framework_TestCase
     /**
      * @return array
      */
-    public static function provideInvalidArgument()
+    public function provideInvalidArgument()
     {
         return array(
             array(null),
