@@ -18,11 +18,11 @@ class SpdxLicensesTest extends \PHPUnit_Framework_TestCase
     /**
      * @var SpdxLicenses
      */
-    private $license;
+    private $licenses;
 
     public function setUp()
     {
-        $this->license = new SpdxLicenses();
+        $this->licenses = new SpdxLicenses();
     }
 
     /**
@@ -31,7 +31,7 @@ class SpdxLicensesTest extends \PHPUnit_Framework_TestCase
      */
     public function testValidate($license)
     {
-        $this->assertTrue($this->license->validate($license));
+        $this->assertTrue($this->licenses->validate($license));
     }
 
     /**
@@ -40,7 +40,7 @@ class SpdxLicensesTest extends \PHPUnit_Framework_TestCase
      */
     public function testInvalidLicenses($invalidLicense)
     {
-        $this->assertFalse($this->license->validate($invalidLicense));
+        $this->assertFalse($this->licenses->validate($invalidLicense));
     }
 
     /**
@@ -50,7 +50,7 @@ class SpdxLicensesTest extends \PHPUnit_Framework_TestCase
      */
     public function testInvalidArgument($invalidArgument)
     {
-        $this->license->validate($invalidArgument);
+        $this->licenses->validate($invalidArgument);
     }
 
     public function testGetResourcesDir()
@@ -109,26 +109,26 @@ class SpdxLicensesTest extends \PHPUnit_Framework_TestCase
 
     public function testGetLicenseByIdentifier()
     {
-        $license = $this->license->getLicenseByIdentifier('AGPL-1.0');
+        $license = $this->licenses->getLicenseByIdentifier('AGPL-1.0');
         $this->assertEquals($license[0], 'Affero General Public License v1.0'); // fullname
         $this->assertFalse($license[1]); // osi approved
     }
 
     public function testGetIdentifierByName()
     {
-        $identifier = $this->license->getIdentifierByName('Affero General Public License v1.0');
+        $identifier = $this->licenses->getIdentifierByName('Affero General Public License v1.0');
         $this->assertEquals($identifier, 'AGPL-1.0');
 
-        $identifier = $this->license->getIdentifierByName('BSD 2-clause "Simplified" License');
+        $identifier = $this->licenses->getIdentifierByName('BSD 2-clause "Simplified" License');
         $this->assertEquals($identifier, 'BSD-2-Clause');
     }
 
     public function testIsOsiApprovedByIdentifier()
     {
-        $osiApproved = $this->license->isOsiApprovedByIdentifier('MIT');
+        $osiApproved = $this->licenses->isOsiApprovedByIdentifier('MIT');
         $this->assertTrue($osiApproved);
 
-        $osiApproved = $this->license->isOsiApprovedByIdentifier('AGPL-1.0');
+        $osiApproved = $this->licenses->isOsiApprovedByIdentifier('AGPL-1.0');
         $this->assertFalse($osiApproved);
     }
 
