@@ -62,13 +62,13 @@ class SpdxLicensesTest extends \PHPUnit_Framework_TestCase
 
         $this->assertTrue(
             is_dir($dir),
-            'Assert resources directory exists and is a directory.'
+            'Expected resources directory to exist.'
         );
 
         $this->assertEquals(
             realpath($dir),
             realpath(__DIR__ . '/../res'),
-            'Assert resources directory to be "res" (relative to project root).'
+            'Expected resources directory to be "res" (relative to project root).'
         );
     }
 
@@ -79,7 +79,10 @@ class SpdxLicensesTest extends \PHPUnit_Framework_TestCase
      */
     public function testResourceFilesExist($file)
     {
-        $this->assertFileExists(SpdxLicenses::getResourcesDir() . '/' . $file, 'Assert resources files exist.');
+        $this->assertFileExists(
+            SpdxLicenses::getResourcesDir() . '/' . $file,
+            'Expected file to exist in resources dir: ' . $file
+        );
     }
 
     /**
@@ -119,7 +122,7 @@ class SpdxLicensesTest extends \PHPUnit_Framework_TestCase
             $this->fail('Could not decode JSON within ' . $file . $error);
         }
 
-        $this->assertNotEmpty($json, 'Decoding the resources file should not result in an empty array.');
+        $this->assertNotEmpty($json);
     }
 
     public function testGetLicenseByIdentifier()
