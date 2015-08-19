@@ -125,8 +125,9 @@ class SpdxLicensesTest extends \PHPUnit_Framework_TestCase
     public function testGetLicenseByIdentifier()
     {
         $license = $this->licenses->getLicenseByIdentifier('AGPL-1.0');
-        $this->assertEquals($license[0], 'Affero General Public License v1.0'); // fullname
-        $this->assertFalse($license[1]); // osi approved
+        $this->assertEquals('Affero General Public License v1.0', $license[0]);
+        $this->assertFalse($license[1]);
+        $this->assertStringStartsWith('https://spdx.org/licenses/', $license[2]);
     }
 
     public function testGetIdentifierByName()
