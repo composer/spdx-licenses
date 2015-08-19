@@ -184,16 +184,16 @@ class SpdxLicenses
     private function loadLicenses()
     {
         if (null === $this->licenses) {
-            $jsonFile = file_get_contents(self::getResourcesDir() . '/' . self::LICENSES_FILE);
-            $this->licenses = json_decode($jsonFile, true);
+            $json = file_get_contents(self::getResourcesDir() . '/' . self::LICENSES_FILE);
+            $this->licenses = json_decode($json, true);
         }
     }
 
     private function loadExceptions()
     {
         if (null === $this->exceptions) {
-            $jsonFile = file_get_contents(self::getResourcesDir() . '/' . self::EXCEPTIONS_FILE);
-            $this->exceptions = json_decode($jsonFile, true);
+            $json = file_get_contents(self::getResourcesDir() . '/' . self::EXCEPTIONS_FILE);
+            $this->exceptions = json_decode($json, true);
         }
     }
 
