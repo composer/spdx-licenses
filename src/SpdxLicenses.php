@@ -204,8 +204,7 @@ class SpdxLicenses
     {
         if (null === $this->licensesExpression) {
             $licenses = array_map('preg_quote', array_keys($this->licenses));
-            sort($licenses);
-            $licenses = array_reverse($licenses);
+            rsort($licenses);
             $licenses = implode('|', $licenses);
             $this->licensesExpression = $licenses;
         }
@@ -220,8 +219,7 @@ class SpdxLicenses
     {
         if (null === $this->exceptionsExpression) {
             $exceptions = array_map('preg_quote', array_keys($this->exceptions));
-            sort($exceptions);
-            $exceptions = array_reverse($exceptions);
+            rsort($exceptions);
             $exceptions = implode('|', $exceptions);
             $this->exceptionsExpression = $exceptions;
         }
