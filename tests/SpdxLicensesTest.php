@@ -53,30 +53,43 @@ class SpdxLicensesTest extends \PHPUnit_Framework_TestCase
         $this->licenses->validate($invalidArgument);
     }
 
+    /**
+     * @testdox Resources directory exists at expected locatation.
+     */
     public function testGetResourcesDir()
     {
         $dir = SpdxLicenses::getResourcesDir();
 
-        $this->assertTrue(is_dir($dir));
-        $this->assertEquals(realpath($dir), realpath(__DIR__ . '/../res'));
+        $this->assertTrue(
+            is_dir($dir),
+            'Assert resources directory exists and is a directory.'
+        );
+
+        $this->assertEquals(
+            realpath($dir),
+            realpath(__DIR__ . '/../res'),
+            'Assert resources directory to be "res" (relative to project root).'
+        );
     }
 
     /**
+     * @testdox Resources files exist at expected locations.
      * @dataProvider provideResourceFiles
      * @param string $file
      */
     public function testResourceFilesExist($file)
     {
-        $this->assertFileExists(SpdxLicenses::getResourcesDir() . '/' . $file);
+        $this->assertFileExists(SpdxLicenses::getResourcesDir() . '/' . $file, 'Assert resources files exist.');
     }
 
     /**
+     * @testdox Resources files contain valid JSON.
      * @dataProvider provideResourceFiles
      * @param string $file
      */
     public function testResourceFilesContainJson($file)
     {
-        $json = json_decode(file_get_contents(SpdxLicenses::getResourcesDir() . '/' . $file));
+        $json = json_decode(file_get_contents(SpdxLicenses::getResourcesDir() . '/' . $file), true);
 
         if (null === $json && json_last_error()) {
             switch (json_last_error()) {
