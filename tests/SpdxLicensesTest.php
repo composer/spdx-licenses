@@ -118,6 +118,8 @@ class SpdxLicensesTest extends \PHPUnit_Framework_TestCase
 
             $this->fail('Could not decode JSON within ' . $file . $error);
         }
+
+        $this->assertNotEmpty($json, 'Decoding the resources file should not result in an empty array.');
     }
 
     public function testGetLicenseByIdentifier()
