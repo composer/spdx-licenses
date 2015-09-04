@@ -242,7 +242,7 @@ class SpdxLicenses
 {
 (?(DEFINE)
     # idstring: 1*( ALPHA / DIGIT / - / . )
-    (?<idstring>[\pL\pN\.-]{1,})
+    (?<idstring>[\pL\pN.-]{1,})
 
     # license-id: taken from list
     (?<licenseid>${licenses})
