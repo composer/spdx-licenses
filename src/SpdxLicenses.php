@@ -242,7 +242,7 @@ class SpdxLicenses
 {
 (?(DEFINE)
     # idstring: 1*( ALPHA / DIGIT / - / . )
-    (?<idstring>[\pL\pN\-\.]{1,})
+    (?<idstring>[\pL\pN\.-]{1,})
 
     # license-id: taken from list
     (?<licenseid>${licenses})
@@ -256,7 +256,7 @@ class SpdxLicenses
     # simple-expresssion: license-id / license-id+ / license-ref
     (?<simple_expression>(?&licenseid)\+? | (?&licenseid) | (?&licenseref))
 
-    # compound expression: 1*(
+    # compound-expression: 1*(
     #   simple-expression /
     #   simple-expression WITH license-exception-id /
     #   compound-expression AND compound-expression /
