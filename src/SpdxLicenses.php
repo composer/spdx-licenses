@@ -235,6 +235,10 @@ class SpdxLicenses
      */
     private function isValidLicenseString($license)
     {
+        if (isset($this->licenses[$license])) {
+            return true;
+        }
+
         $licenses = $this->getLicensesExpression();
         $exceptions = $this->getExceptionsExpression();
 
