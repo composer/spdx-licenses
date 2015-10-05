@@ -1,4 +1,8 @@
 {
+    "0BSD": [
+        "BSD Zero Clause License",
+        false
+    ],
     "AAL": [
         "Attribution Assurance License",
         true
@@ -351,6 +355,10 @@
         "CeCILL Free Software License Agreement v2.0",
         false
     ],
+    "CECILL-2.1": [
+        "CeCILL Free Software License Agreement v2.1",
+        true
+    ],
     "CECILL-B": [
         "CeCILL-B Free Software License Agreement",
         false
@@ -393,6 +401,10 @@
     ],
     "Crossword": [
         "Crossword License",
+        false
+    ],
+    "CrystalStacker": [
+        "CrystalStacker License",
         false
     ],
     "CUA-OPL-1.0": [
@@ -585,6 +597,10 @@
     ],
     "Intel-ACPI": [
         "Intel ACPI Software License Agreement",
+        false
+    ],
+    "Interbase-1.0": [
+        "Interbase Public License v1.0",
         false
     ],
     "IPA": [
@@ -1009,6 +1025,10 @@
     ],
     "SCEA": [
         "SCEA Shared Source License",
+        false
+    ],
+    "Sendmail": [
+        "Sendmail License",
         false
     ],
     "SGI-B-1.0": [
