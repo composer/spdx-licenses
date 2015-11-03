@@ -9,9 +9,7 @@
  * the LICENSE file that was distributed with this source code.
  */
 
-namespace Composer\Spdx\Test;
-
-use Composer\Spdx\SpdxLicenses;
+namespace Composer\Spdx;
 
 class SpdxLicensesTest extends \PHPUnit_Framework_TestCase
 {
@@ -27,6 +25,7 @@ class SpdxLicensesTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @dataProvider provideValidLicenses
+     *
      * @param string|array $license
      */
     public function testValidate($license)
@@ -36,6 +35,7 @@ class SpdxLicensesTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @dataProvider provideInvalidLicenses
+     *
      * @param string|array $invalidLicense
      */
     public function testInvalidLicenses($invalidLicense)
@@ -46,6 +46,7 @@ class SpdxLicensesTest extends \PHPUnit_Framework_TestCase
     /**
      * @dataProvider provideInvalidArgument
      * @expectedException \InvalidArgumentException
+     *
      * @param mixed $invalidArgument
      */
     public function testInvalidArgument($invalidArgument)
@@ -75,6 +76,7 @@ class SpdxLicensesTest extends \PHPUnit_Framework_TestCase
     /**
      * @testdox Resources files exist at expected locations.
      * @dataProvider provideResourceFiles
+     *
      * @param string $file
      */
     public function testResourceFilesExist($file)
@@ -88,6 +90,7 @@ class SpdxLicensesTest extends \PHPUnit_Framework_TestCase
     /**
      * @testdox Resources files contain valid JSON.
      * @dataProvider provideResourceFiles
+     *
      * @param string $file
      */
     public function testResourceFilesContainJson($file)

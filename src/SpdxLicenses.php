@@ -151,6 +151,7 @@ class SpdxLicenses
      * @param array|string $license
      *
      * @throws \InvalidArgumentException
+     *
      * @return bool
      */
     public function validate($license)
@@ -231,6 +232,7 @@ class SpdxLicenses
      * @param string $license
      *
      * @throws \RuntimeException
+     *
      * @return bool
      */
     private function isValidLicenseString($license)
