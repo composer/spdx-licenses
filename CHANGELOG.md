@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased]
 
 ### Changed
+- drop redundant `test` namespace.
 - added github diff links to versions in changelog.
 - ran php-cs-fixer for style fixes.
 - updated .travis.yml, composer.json and .php_cs files.
