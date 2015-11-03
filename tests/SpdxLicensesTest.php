@@ -9,9 +9,7 @@
  * the LICENSE file that was distributed with this source code.
  */
 
-namespace Composer\Spdx\Test;
-
-use Composer\Spdx\SpdxLicenses;
+namespace Composer\Spdx;
 
 class SpdxLicensesTest extends \PHPUnit_Framework_TestCase
 {
