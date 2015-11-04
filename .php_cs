@@ -43,7 +43,6 @@ return Symfony\CS\Config\Config::create()
         'phpdoc_separation' => true,
         'phpdoc_trim' => true,
         'phpdoc_type_to_var' => true,
-        'psr0' => true,
         'return' => true,
         'remove_leading_slash_use' => true,
         'remove_lines_between_uses' => true,
