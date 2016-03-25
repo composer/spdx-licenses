@@ -415,6 +415,10 @@
         "Cube License",
         false
     ],
+    "curl": [
+        "curl License",
+        false
+    ],
     "D-FSL-1.0": [
         "Deutsche Freie Software Lizenz",
         false
@@ -591,6 +595,10 @@
         "Imlib2 License",
         false
     ],
+    "Info-ZIP": [
+        "Info-ZIP License",
+        false
+    ],
     "Intel": [
         "Intel Open Source License",
         true
@@ -676,7 +684,7 @@
         false
     ],
     "LPPL-1.3a": [
-        "LaTeX Project Public License 1.3a",
+        "LaTeX Project Public License v1.3a",
         false
     ],
     "LPPL-1.3c": [
@@ -825,6 +833,10 @@
     ],
     "Nunit": [
         "Nunit License",
+        false
+    ],
+    "OCCT-PL": [
+        "Open CASCADE Technology Public License",
         false
     ],
     "OCLC-2.0": [
