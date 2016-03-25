@@ -10,7 +10,6 @@ git:
 sudo: false
 
 php:
-  - 5.3.3
   - 5.3
   - 5.4
   - 5.5
@@ -23,9 +22,6 @@ matrix:
   fast_finish: true
   allow_failure:
     - php: nightly
-
-before_install:
-  - composer self-update -vvv --no-interaction
 
 install:
   - composer install -vvv --no-interaction --no-progress --prefer-dist
