@@ -20,7 +20,7 @@ php:
 
 matrix:
   fast_finish: true
-  allow_failure:
+  allow_failures:
     - php: nightly
 
 install:
