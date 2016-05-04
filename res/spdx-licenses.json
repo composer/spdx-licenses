@@ -1,7 +1,7 @@
 {
     "0BSD": [
         "BSD Zero Clause License",
-        false
+        true
     ],
     "AAL": [
         "Attribution Assurance License",
@@ -503,6 +503,10 @@
         "FreeImage Public License v1.0",
         false
     ],
+    "FSFAP": [
+        "FSF All Permissive License",
+        false
+    ],
     "FSFUL": [
         "FSF Unlimited License",
         false
@@ -631,6 +635,14 @@
         "JSON License",
         false
     ],
+    "LAL-1.2": [
+        "Licence Art Libre 1.2",
+        false
+    ],
+    "LAL-1.3": [
+        "Licence Art Libre 1.3",
+        false
+    ],
     "Latex2e": [
         "Latex2e License",
         false
@@ -662,6 +674,18 @@
     "libtiff": [
         "libtiff License",
         false
+    ],
+    "LiLiQ-P-1.1": [
+        "Licence Libre du Qu\u00e9bec \u2013 Permissive version 1.1",
+        true
+    ],
+    "LiLiQ-R-1.1": [
+        "Licence Libre du Qu\u00e9bec \u2013 R\u00e9ciprocit\u00e9 version 1.1",
+        true
+    ],
+    "LiLiQ-Rplus-1.1": [
+        "Licence Libre du Qu\u00e9bec \u2013 R\u00e9ciprocit\u00e9 forte version 1.1",
+        true
     ],
     "LPL-1.0": [
         "Lucent Public License Version 1.0",
@@ -794,6 +818,10 @@
     "NGPL": [
         "Nethack General Public License",
         true
+    ],
+    "NLOD-1.0": [
+        "Norwegian Licence for Open Government Data",
+        false
     ],
     "NLPL": [
         "No Limit Public License",
@@ -935,6 +963,10 @@
         "Open Public License v1.0",
         false
     ],
+    "OSET-PL-2.1": [
+        "OSET Public License version 2.1",
+        true
+    ],
     "OSL-1.0": [
         "Open Software License 1.0",
         true
@@ -1073,6 +1105,10 @@
     ],
     "SMLNJ": [
         "Standard ML of New Jersey License",
+        false
+    ],
+    "SMPPL": [
+        "Secure Messaging Protocol Public License",
         false
     ],
     "SNIA": [
