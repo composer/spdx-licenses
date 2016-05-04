@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.1.4] 2016-05-04
+
+  * Changed: new licenses added.
+
 ## [1.1.3] 2016-03-25
 
   * Changed: updated license data files.
@@ -35,6 +39,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
     - Classname: `Updater` -> `SpdxLicensesUpdater`
   * Changed: validation via regex implementation instead of lexer.
 
+[1.1.4]: https://github.com/composer/spdx-licenses/compare/1.1.3...1.1.4
 [1.1.3]: https://github.com/composer/spdx-licenses/compare/1.1.2...1.1.3
 [1.1.2]: https://github.com/composer/spdx-licenses/compare/1.1.1...1.1.2
 [1.1.1]: https://github.com/composer/spdx-licenses/compare/1.1.0...1.1.1
