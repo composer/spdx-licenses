@@ -179,6 +179,18 @@
         "Lawrence Berkeley National Labs BSD variant license",
         false
     ],
+    "BSD-3-Clause-No-Nuclear-License": [
+        "BSD 3-Clause No Nuclear License",
+        false
+    ],
+    "BSD-3-Clause-No-Nuclear-License-2014": [
+        "BSD 3-Clause No Nuclear License 2014",
+        false
+    ],
+    "BSD-3-Clause-No-Nuclear-Warranty": [
+        "BSD 3-Clause No Nuclear Warranty",
+        false
+    ],
     "BSD-4-Clause": [
         "BSD 4-clause \"Original\" or \"Old\" License",
         false
@@ -189,6 +201,10 @@
     ],
     "BSD-Protection": [
         "BSD Protection License",
+        false
+    ],
+    "BSD-Source-Code": [
+        "BSD Source Code Attribution",
         false
     ],
     "BSL-1.0": [
