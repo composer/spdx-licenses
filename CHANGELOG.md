@@ -3,31 +3,35 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.1.5] 2016-09-28
+
+  * Changed: updated licenses list.
+
 ## [1.1.4] 2016-05-04
 
-  * Changed: new licenses added.
+  * Changed: updated licenses list.
 
 ## [1.1.3] 2016-03-25
 
-  * Changed: updated license data files.
+  * Changed: updated licenses list.
   * Changed: dropped `test` namespace.
   * Changed: tedious small things.
 
 ## [1.1.2] 2015-10-05
 
-  * Changed: new licenses added.
+  * Changed: updated licenses list.
 
 ## [1.1.1] 2015-09-07
 
   * Changed: improved performance when looking up just one license.
-  * Changed: new licenses added.
+  * Changed: updated licenses list.
 
 ## [1.1.0] 2015-07-17
 
   * Changed: updater now sorts licenses and exceptions by key.
   * Changed: filenames now class constants of SpdxLicenses (`LICENSES_FILE` and `EXCEPTIONS_FILE`).
   * Changed: resources directory now available via static method `SpdxLicenses::getResourcesDir()`.
-  * Changed: new licenses added.
+  * Changed: updated licenses list.
   * Changed: removed json-schema requirement.
 
 ## [1.0.0] 2015-07-15
@@ -39,6 +43,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
     - Classname: `Updater` -> `SpdxLicensesUpdater`
   * Changed: validation via regex implementation instead of lexer.
 
+[1.1.5]: https://github.com/composer/spdx-licenses/compare/1.1.4...1.1.5
 [1.1.4]: https://github.com/composer/spdx-licenses/compare/1.1.3...1.1.4
 [1.1.3]: https://github.com/composer/spdx-licenses/compare/1.1.2...1.1.3
 [1.1.2]: https://github.com/composer/spdx-licenses/compare/1.1.1...1.1.2
