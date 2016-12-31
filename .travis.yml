@@ -1,5 +1,7 @@
 language: php
 
+sudo: false
+
 cache:
   directories:
     - $HOME/.composer/cache
@@ -28,4 +30,7 @@ install:
   - composer install -vvv --no-interaction --no-progress --prefer-dist
 
 script:
-  - vendor/bin/phpunit
+  - vendor/bin/phpunit --coverage-clover=coverage.xml
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
