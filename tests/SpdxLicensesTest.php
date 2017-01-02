@@ -134,6 +134,19 @@ class SpdxLicensesTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('Affero General Public License v1.0', $license[0]);
         $this->assertFalse($license[1]);
         $this->assertStringStartsWith('https://spdx.org/licenses/', $license[2]);
+
+        $licenseNull = $this->licenses->getLicenseByIdentifier('AGPL-1.0-Illegal');
+        $this->assertNull($licenseNull);
+    }
+
+    public function testGetExceptionByIdentifier()
+    {
+        $licenseNull = $this->licenses->getExceptionByIdentifier('Font-exception-2.0-Errorl');
+        $this->assertNull($licenseNull);
+        
+        $license = $this->licenses->getExceptionByIdentifier('Font-exception-2.0');
+        $this->assertInternalType('array', $license);
+        $this->assertSame('Font exception 2.0', $license[0]);
     }
 
     public function testGetIdentifierByName()
@@ -143,6 +156,12 @@ class SpdxLicensesTest extends \PHPUnit_Framework_TestCase
 
         $identifier = $this->licenses->getIdentifierByName('BSD 2-clause "Simplified" License');
         $this->assertEquals($identifier, 'BSD-2-Clause');
+
+        $identifier = $this->licenses->getIdentifierByName('Font exception 2.0');
+        $this->assertEquals($identifier, 'Font-exception-2.0');
+
+        $identifier = $this->licenses->getIdentifierByName('null-identifier-name');
+        $this->assertNull($identifier);
     }
 
     public function testIsOsiApprovedByIdentifier()
