@@ -11,7 +11,9 @@
 
 namespace Composer\Spdx;
 
-class SpdxLicensesUpdaterTest extends \PHPUnit_Framework_TestCase
+use PHPUnit\Framework\TestCase;
+
+class SpdxLicensesUpdaterTest extends TestCase
 {
     /**
      * @var SpdxLicenses

@@ -49,7 +49,7 @@ $licenses->validate($input);
 Requirements
 ------------
 
-* PHP 5.3.2 is required but using the latest version of PHP is highly recommended.
+* PHP 5.6 is required but using the latest version of PHP is highly recommended.
 
 License
 -------
