@@ -11,7 +11,9 @@
 
 namespace Composer\Spdx;
 
-class SpdxLicensesTest extends \PHPUnit_Framework_TestCase
+use PHPUnit\Framework\TestCase;
+
+class SpdxLicensesTest extends TestCase
 {
     /**
      * @var SpdxLicenses
@@ -143,7 +145,7 @@ class SpdxLicensesTest extends \PHPUnit_Framework_TestCase
     {
         $licenseNull = $this->licenses->getExceptionByIdentifier('Font-exception-2.0-Errorl');
         $this->assertNull($licenseNull);
-        
+
         $license = $this->licenses->getExceptionByIdentifier('Font-exception-2.0');
         $this->assertInternalType('array', $license);
         $this->assertSame('Font exception 2.0', $license[0]);
