@@ -38,18 +38,18 @@ class SpdxLicensesUpdaterTest extends TestCase
     public function testDumpLicenses()
     {
         $this->updater->dumpLicenses();
-        $this->assertTrue(file_exists(SpdxLicenses::getResourcesDir() . '/' . SpdxLicenses::LICENSES_FILE));
+        $this->assertFileExists(SpdxLicenses::getResourcesDir() . '/' . SpdxLicenses::LICENSES_FILE);
 
         $this->updater->dumpLicenses($this->licenseFile);
-        $this->assertTrue(file_exists($this->licenseFile));
+        $this->assertFileExists($this->licenseFile);
     }
 
     public function testDumpExceptions()
     {
         $this->updater->dumpExceptions();
-        $this->assertTrue(file_exists(SpdxLicenses::getResourcesDir() . '/' . SpdxLicenses::EXCEPTIONS_FILE));
+        $this->assertFileExists(SpdxLicenses::getResourcesDir() . '/' . SpdxLicenses::EXCEPTIONS_FILE);
 
         $this->updater->dumpExceptions($this->exceptionFile);
-        $this->assertTrue(file_exists($this->exceptionFile));
+        $this->assertFileExists($this->exceptionFile);
     }
 }
