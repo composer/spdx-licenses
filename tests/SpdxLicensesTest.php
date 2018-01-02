@@ -156,7 +156,7 @@ class SpdxLicensesTest extends TestCase
         $identifier = $this->licenses->getIdentifierByName('Affero General Public License v1.0');
         $this->assertEquals($identifier, 'AGPL-1.0');
 
-        $identifier = $this->licenses->getIdentifierByName('BSD 2-clause "Simplified" License');
+        $identifier = $this->licenses->getIdentifierByName('BSD 2-Clause "Simplified" License');
         $this->assertEquals($identifier, 'BSD-2-Clause');
 
         $identifier = $this->licenses->getIdentifierByName('Font exception 2.0');
@@ -203,16 +203,16 @@ class SpdxLicensesTest extends TestCase
                 'NONE',
                 'NOASSERTION',
                 'LicenseRef-3',
-                array('LGPL-2.0', 'GPL-3.0+'),
-                '(LGPL-2.0 or GPL-3.0+)',
-                '(LGPL-2.0 OR GPL-3.0+)',
-                array('EUDatagrid and GPL-3.0+'),
-                '(EUDatagrid and GPL-3.0+)',
-                '(EUDatagrid AND GPL-3.0+)',
-                'GPL-2.0 with Autoconf-exception-2.0',
-                'GPL-2.0 WITH Autoconf-exception-2.0',
-                'GPL-2.0+ WITH Autoconf-exception-2.0',
-                array('(GPL-3.0 and GPL-2.0 or GPL-3.0+)'),
+                array('LGPL-2.0-only', 'GPL-3.0-or-later'),
+                '(LGPL-2.0-only or GPL-3.0-or-later)',
+                '(LGPL-2.0-only OR GPL-3.0-or-later)',
+                array('EUDatagrid and GPL-3.0-or-later'),
+                '(EUDatagrid and GPL-3.0-or-later)',
+                '(EUDatagrid AND GPL-3.0-or-later)',
+                'GPL-2.0-only with Autoconf-exception-2.0',
+                'GPL-2.0-only WITH Autoconf-exception-2.0',
+                'GPL-2.0-or-later WITH Autoconf-exception-2.0',
+                array('(GPL-3.0-only and GPL-2.0-only or GPL-3.0-or-later)'),
             ),
             $identifiers
         );
@@ -240,10 +240,10 @@ class SpdxLicensesTest extends TestCase
             array('MIT AND NONE'),
             array('MIT (MIT and MIT)'),
             array('(MIT and MIT) MIT'),
-            array(array('LGPL-2.0', 'The system pwns you')),
-            array('and GPL-3.0+'),
-            array('(EUDatagrid and GPL-3.0+ and  )'),
-            array('(EUDatagrid xor GPL-3.0+)'),
+            array(array('LGPL-2.0-only', 'The system pwns you')),
+            array('and GPL-3.0-or-later'),
+            array('(EUDatagrid and GPL-3.0-or-later and  )'),
+            array('(EUDatagrid xor GPL-3.0-or-later)'),
             array('(MIT Or MIT)'),
             array('(NONE or MIT)'),
             array('(NOASSERTION or MIT)'),
