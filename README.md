@@ -39,6 +39,9 @@ $licenses->getIdentifierByName('MIT License');
 // check if a license is OSI approved by identifier
 $licenses->isOsiApprovedByIdentifier('MIT');
 
+// check if a license identifier is deprecated
+$licenses->isDeprecatedByIdentifier('MIT');
+
 // check if input is a valid SPDX license expression
 $licenses->validate($input);
 ```

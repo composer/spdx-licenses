@@ -79,11 +79,8 @@ class SpdxLicensesUpdater
         $data = json_decode(file_get_contents($url), true);
 
         foreach ($data['licenses'] as $info) {
-            if ($info['isDeprecatedLicenseId']) {
-                continue;
-            }
             $licenses[$info['licenseId']] = array(
-                trim($info['name']), $info['isOsiApproved']
+                trim($info['name']), $info['isOsiApproved'], $info['isDeprecatedLicenseId']
             );
         }
 

@@ -136,6 +136,7 @@ class SpdxLicensesTest extends TestCase
         $this->assertEquals('Affero General Public License v1.0', $license[0]);
         $this->assertFalse($license[1]);
         $this->assertStringStartsWith('https://spdx.org/licenses/', $license[2]);
+        $this->assertFalse($license[3]);
 
         $licenseNull = $this->licenses->getLicenseByIdentifier('AGPL-1.0-Illegal');
         $this->assertNull($licenseNull);
@@ -173,6 +174,15 @@ class SpdxLicensesTest extends TestCase
 
         $osiApproved = $this->licenses->isOsiApprovedByIdentifier('AGPL-1.0');
         $this->assertFalse($osiApproved);
+    }
+
+    public function testIsDeprecatedByIdentifier()
+    {
+        $deprecated = $this->licenses->isDeprecatedByIdentifier('GPL-3.0');
+        $this->assertTrue($deprecated);
+
+        $deprecated = $this->licenses->isDeprecatedByIdentifier('GPL-3.0-only');
+        $this->assertFalse($deprecated);
     }
 
     /**

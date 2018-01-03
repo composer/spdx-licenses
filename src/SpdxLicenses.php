@@ -26,7 +26,7 @@ class SpdxLicenses
      * a numerically indexed array with license details.
      *
      *  [ license identifier =>
-     *      [ 0 => full name (string), 1 => osi certified (bool) ]
+     *      [ 0 => full name (string), 1 => osi certified (bool), 2 => deprecated (bool) ]
      *    , ...
      *  ]
      *
@@ -71,7 +71,7 @@ class SpdxLicenses
      * This function adds a link to the full license text to the license metadata.
      * The array returned is in the form of:
      *
-     *  [ 0 => full name (string), 1 => osi certified, 2 => link to license text (string) ]
+     *  [ 0 => full name (string), 1 => osi certified, 2 => link to license text (string), 3 => deprecation status (bool) ]
      *
      * @param string $identifier
      *
@@ -84,7 +84,8 @@ class SpdxLicenses
         }
 
         $license = $this->licenses[$identifier];
-        $license[] = 'https://spdx.org/licenses/' . $identifier . '.html#licenseText';
+        $license[3] = $license[2];
+        $license[2] = 'https://spdx.org/licenses/' . $identifier . '.html#licenseText';
 
         return $license;
     }
@@ -145,6 +146,18 @@ class SpdxLicenses
     public function isOsiApprovedByIdentifier($identifier)
     {
         return $this->licenses[$identifier][1];
+    }
+
+    /**
+     * Returns the deprecation status for a license by identifier.
+     *
+     * @param string $identifier
+     *
+     * @return bool
+     */
+    public function isDeprecatedByIdentifier($identifier)
+    {
+        return $this->licenses[$identifier][2];
     }
 
     /**
