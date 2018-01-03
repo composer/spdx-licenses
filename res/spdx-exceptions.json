@@ -1,6 +1,6 @@
 {
     "389-exception": [
-        "389 Directory Server\nException"
+        "389 Directory Server Exception"
     ],
     "Autoconf-exception-2.0": [
         "Autoconf exception 2.0"
@@ -10,6 +10,9 @@
     ],
     "Bison-exception-2.2": [
         "Bison exception 2.2"
+    ],
+    "Bootloader-exception": [
+        "Bootloader Distribution Exception"
     ],
     "Classpath-exception-2.0": [
         "Classpath exception 2.0"
@@ -49,6 +52,9 @@
     ],
     "Libtool-exception": [
         "Libtool Exception"
+    ],
+    "Linux-syscall-note": [
+        "Linux Syscall Note"
     ],
     "LZMA-exception": [
         "LZMA exception"
