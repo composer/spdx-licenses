@@ -91,6 +91,16 @@ class SpdxLicenses
     }
 
     /**
+     * Returns all licenses information, keyed by the license identifier.
+     *
+     * @return array
+     */
+    public function getLicenses()
+    {
+        return $this->licenses;
+    }
+
+    /**
      * Returns license exception metadata by license exception identifier.
      *
      * This function adds a link to the full license exception text to the license exception metadata.
