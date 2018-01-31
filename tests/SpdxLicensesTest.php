@@ -142,6 +142,18 @@ class SpdxLicensesTest extends TestCase
         $this->assertNull($licenseNull);
     }
 
+    public function testGetLicenses()
+    {
+        $results = $this->licenses->getLicenses();
+
+        $this->assertArrayHasKey('cc-by-sa-4.0', $results);
+        $this->assertArrayHasKey(0, $results['cc-by-sa-4.0']);
+        $this->assertEquals('CC-BY-SA-4.0', $results['cc-by-sa-4.0'][0]);
+        $this->assertEquals('Creative Commons Attribution Share Alike 4.0', $results['cc-by-sa-4.0'][1]);
+        $this->assertEquals(false, $results['cc-by-sa-4.0'][2]);
+        $this->assertEquals(false, $results['cc-by-sa-4.0'][3]);
+    }
+
     public function testGetExceptionByIdentifier()
     {
         $licenseNull = $this->licenses->getExceptionByIdentifier('Font-exception-2.0-Errorl');
