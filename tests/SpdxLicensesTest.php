@@ -254,7 +254,6 @@ class SpdxLicensesTest extends TestCase
             array('and GPL-3.0-or-later'),
             array('(EUDatagrid and GPL-3.0-or-later and  )'),
             array('(EUDatagrid xor GPL-3.0-or-later)'),
-            array('(MIT Or MIT)'),
             array('(NONE or MIT)'),
             array('(NOASSERTION or MIT)'),
             array('Autoconf-exception-2.0 WITH MIT'),
