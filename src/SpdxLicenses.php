@@ -25,8 +25,8 @@ class SpdxLicenses
      * The array is indexed by license identifiers, which contain
      * a numerically indexed array with license details.
      *
-     *  [ license identifier =>
-     *      [ 0 => full name (string), 1 => osi certified (bool), 2 => deprecated (bool) ]
+     *  [ lowercased license identifier =>
+     *      [ 0 => identifier (string), 1 => full name (string), 2 => osi certified (bool), 3 => deprecated (bool) ]
      *    , ...
      *  ]
      *
@@ -45,8 +45,8 @@ class SpdxLicenses
      * The array is indexed by license exception identifiers, which contain
      * a numerically indexed array with license exception details.
      *
-     *  [ exception identifier =>
-     *      [ 0 => full name (string) ]
+     *  [ lowercased exception identifier =>
+     *      [ 0 => exception identifier (string), 1 => full name (string) ]
      *    , ...
      *  ]
      *
@@ -91,9 +91,9 @@ class SpdxLicenses
     }
 
     /**
-     * Returns all licenses information, keyed by the license identifier.
+     * Returns all licenses information, keyed by the lowercased license identifier.
      *
-     * @return array
+     * @return array[] Each item is [ 0 => identifier (string), 1 => full name (string), 2 => osi certified (bool), 3 => deprecated (bool) ]
      */
     public function getLicenses()
     {
