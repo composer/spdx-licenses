@@ -132,8 +132,8 @@ class SpdxLicensesTest extends TestCase
 
     public function testGetLicenseByIdentifier()
     {
-        $license = $this->licenses->getLicenseByIdentifier('AGPL-1.0');
-        $this->assertEquals('Affero General Public License v1.0', $license[0]);
+        $license = $this->licenses->getLicenseByIdentifier('AGPL-1.0-only');
+        $this->assertEquals('Affero General Public License v1.0 only', $license[0]);
         $this->assertFalse($license[1]);
         $this->assertStringStartsWith('https://spdx.org/licenses/', $license[2]);
         $this->assertFalse($license[3]);
@@ -149,7 +149,7 @@ class SpdxLicensesTest extends TestCase
         $this->assertArrayHasKey('cc-by-sa-4.0', $results);
         $this->assertArrayHasKey(0, $results['cc-by-sa-4.0']);
         $this->assertEquals('CC-BY-SA-4.0', $results['cc-by-sa-4.0'][0]);
-        $this->assertEquals('Creative Commons Attribution Share Alike 4.0', $results['cc-by-sa-4.0'][1]);
+        $this->assertEquals('Creative Commons Attribution Share Alike 4.0 International', $results['cc-by-sa-4.0'][1]);
         $this->assertEquals(false, $results['cc-by-sa-4.0'][2]);
         $this->assertEquals(false, $results['cc-by-sa-4.0'][3]);
     }

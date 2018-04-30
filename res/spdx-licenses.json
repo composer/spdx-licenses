@@ -62,6 +62,16 @@
     "AGPL-1.0": [
         "Affero General Public License v1.0",
         false,
+        true
+    ],
+    "AGPL-1.0-only": [
+        "Affero General Public License v1.0 only",
+        false,
+        false
+    ],
+    "AGPL-1.0-or-later": [
+        "Affero General Public License v1.0 or later",
+        false,
         false
     ],
     "AGPL-3.0": [
@@ -305,152 +315,152 @@
         false
     ],
     "CC-BY-1.0": [
-        "Creative Commons Attribution 1.0",
+        "Creative Commons Attribution 1.0 Generic",
         false,
         false
     ],
     "CC-BY-2.0": [
-        "Creative Commons Attribution 2.0",
+        "Creative Commons Attribution 2.0 Generic",
         false,
         false
     ],
     "CC-BY-2.5": [
-        "Creative Commons Attribution 2.5",
+        "Creative Commons Attribution 2.5 Generic",
         false,
         false
     ],
     "CC-BY-3.0": [
-        "Creative Commons Attribution 3.0",
+        "Creative Commons Attribution 3.0 Unported",
         false,
         false
     ],
     "CC-BY-4.0": [
-        "Creative Commons Attribution 4.0",
+        "Creative Commons Attribution 4.0 International",
         false,
         false
     ],
     "CC-BY-NC-1.0": [
-        "Creative Commons Attribution Non Commercial 1.0",
+        "Creative Commons Attribution Non Commercial 1.0 Generic",
         false,
         false
     ],
     "CC-BY-NC-2.0": [
-        "Creative Commons Attribution Non Commercial 2.0",
+        "Creative Commons Attribution Non Commercial 2.0 Generic",
         false,
         false
     ],
     "CC-BY-NC-2.5": [
-        "Creative Commons Attribution Non Commercial 2.5",
+        "Creative Commons Attribution Non Commercial 2.5 Generic",
         false,
         false
     ],
     "CC-BY-NC-3.0": [
-        "Creative Commons Attribution Non Commercial 3.0",
+        "Creative Commons Attribution Non Commercial 3.0 Unported",
         false,
         false
     ],
     "CC-BY-NC-4.0": [
-        "Creative Commons Attribution Non Commercial 4.0",
+        "Creative Commons Attribution Non Commercial 4.0 International",
         false,
         false
     ],
     "CC-BY-NC-ND-1.0": [
-        "Creative Commons Attribution Non Commercial No Derivatives 1.0",
+        "Creative Commons Attribution Non Commercial No Derivatives 1.0 Generic",
         false,
         false
     ],
     "CC-BY-NC-ND-2.0": [
-        "Creative Commons Attribution Non Commercial No Derivatives 2.0",
+        "Creative Commons Attribution Non Commercial No Derivatives 2.0 Generic",
         false,
         false
     ],
     "CC-BY-NC-ND-2.5": [
-        "Creative Commons Attribution Non Commercial No Derivatives 2.5",
+        "Creative Commons Attribution Non Commercial No Derivatives 2.5 Generic",
         false,
         false
     ],
     "CC-BY-NC-ND-3.0": [
-        "Creative Commons Attribution Non Commercial No Derivatives 3.0",
+        "Creative Commons Attribution Non Commercial No Derivatives 3.0 Unported",
         false,
         false
     ],
     "CC-BY-NC-ND-4.0": [
-        "Creative Commons Attribution Non Commercial No Derivatives 4.0",
+        "Creative Commons Attribution Non Commercial No Derivatives 4.0 International",
         false,
         false
     ],
     "CC-BY-NC-SA-1.0": [
-        "Creative Commons Attribution Non Commercial Share Alike 1.0",
+        "Creative Commons Attribution Non Commercial Share Alike 1.0 Generic",
         false,
         false
     ],
     "CC-BY-NC-SA-2.0": [
-        "Creative Commons Attribution Non Commercial Share Alike 2.0",
+        "Creative Commons Attribution Non Commercial Share Alike 2.0 Generic",
         false,
         false
     ],
     "CC-BY-NC-SA-2.5": [
-        "Creative Commons Attribution Non Commercial Share Alike 2.5",
+        "Creative Commons Attribution Non Commercial Share Alike 2.5 Generic",
         false,
         false
     ],
     "CC-BY-NC-SA-3.0": [
-        "Creative Commons Attribution Non Commercial Share Alike 3.0",
+        "Creative Commons Attribution Non Commercial Share Alike 3.0 Unported",
         false,
         false
     ],
     "CC-BY-NC-SA-4.0": [
-        "Creative Commons Attribution Non Commercial Share Alike 4.0",
+        "Creative Commons Attribution Non Commercial Share Alike 4.0 International",
         false,
         false
     ],
     "CC-BY-ND-1.0": [
-        "Creative Commons Attribution No Derivatives 1.0",
+        "Creative Commons Attribution No Derivatives 1.0 Generic",
         false,
         false
     ],
     "CC-BY-ND-2.0": [
-        "Creative Commons Attribution No Derivatives 2.0",
+        "Creative Commons Attribution No Derivatives 2.0 Generic",
         false,
         false
     ],
     "CC-BY-ND-2.5": [
-        "Creative Commons Attribution No Derivatives 2.5",
+        "Creative Commons Attribution No Derivatives 2.5 Generic",
         false,
         false
     ],
     "CC-BY-ND-3.0": [
-        "Creative Commons Attribution No Derivatives 3.0",
+        "Creative Commons Attribution No Derivatives 3.0 Unported",
         false,
         false
     ],
     "CC-BY-ND-4.0": [
-        "Creative Commons Attribution No Derivatives 4.0",
+        "Creative Commons Attribution No Derivatives 4.0 International",
         false,
         false
     ],
     "CC-BY-SA-1.0": [
-        "Creative Commons Attribution Share Alike 1.0",
+        "Creative Commons Attribution Share Alike 1.0 Generic",
         false,
         false
     ],
     "CC-BY-SA-2.0": [
-        "Creative Commons Attribution Share Alike 2.0",
+        "Creative Commons Attribution Share Alike 2.0 Generic",
         false,
         false
     ],
     "CC-BY-SA-2.5": [
-        "Creative Commons Attribution Share Alike 2.5",
+        "Creative Commons Attribution Share Alike 2.5 Generic",
         false,
         false
     ],
     "CC-BY-SA-3.0": [
-        "Creative Commons Attribution Share Alike 3.0",
+        "Creative Commons Attribution Share Alike 3.0 Unported",
         false,
         false
     ],
     "CC-BY-SA-4.0": [
-        "Creative Commons Attribution Share Alike 4.0",
+        "Creative Commons Attribution Share Alike 4.0 International",
         false,
         false
     ],
@@ -1015,7 +1025,7 @@
         true
     ],
     "LGPL-2.1+": [
-        "GNU Library General Public License v2 or later",
+        "GNU Library General Public License v2.1 or later",
         true,
         true
     ],
@@ -1079,6 +1089,11 @@
         true,
         false
     ],
+    "Linux-OpenIB": [
+        "Linux Kernel Variant of OpenIB.org license",
+        false,
+        false
+    ],
     "LPL-1.0": [
         "Lucent Public License Version 1.0",
         true,
@@ -1126,6 +1141,11 @@
     ],
     "MIT": [
         "MIT License",
+        true,
+        false
+    ],
+    "MIT-0": [
+        "MIT No Attribution",
         true,
         false
     ],

@@ -56,6 +56,9 @@
     "Linux-syscall-note": [
         "Linux Syscall Note"
     ],
+    "LLVM-exception": [
+        "LLVM Exception"
+    ],
     "LZMA-exception": [
         "LZMA exception"
     ],
@@ -67,6 +70,9 @@
     ],
     "OCCT-exception-1.0": [
         "Open CASCADE Exception 1.0"
+    ],
+    "OpenJDK-assembly-exception-1.0": [
+        "OpenJDK Assembly exception 1.0"
     ],
     "openvpn-openssl-exception": [
         "OpenVPN OpenSSL Exception"
