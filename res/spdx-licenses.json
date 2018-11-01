@@ -544,6 +544,11 @@
         false,
         false
     ],
+    "copyleft-next-0.3.1": [
+        "copyleft-next 0.3.1",
+        false,
+        false
+    ],
     "CPAL-1.0": [
         "Common Public Attribution License 1.0",
         true,
@@ -1339,6 +1344,11 @@
         false,
         false
     ],
+    "ODC-By-1.0": [
+        "Open Data Commons Attribution License v1.0",
+        false,
+        false
+    ],
     "OFL-1.0": [
         "SIL Open Font License 1.0",
         false,
@@ -1347,6 +1357,21 @@
     "OFL-1.1": [
         "SIL Open Font License 1.1",
         true,
+        false
+    ],
+    "OGL-UK-1.0": [
+        "Open Government Licence v1.0",
+        false,
+        false
+    ],
+    "OGL-UK-2.0": [
+        "Open Government Licence v2.0",
+        false,
+        false
+    ],
+    "OGL-UK-3.0": [
+        "Open Government Licence v3.0",
+        false,
         false
     ],
     "OGTSL": [
@@ -1589,6 +1614,11 @@
         false,
         false
     ],
+    "Sendmail-8.23": [
+        "Sendmail License 8.23",
+        false,
+        false
+    ],
     "SGI-B-1.0": [
         "SGI Free Software License B v1.0",
         false,
@@ -1696,6 +1726,16 @@
     ],
     "TOSL": [
         "Trusster Open Source License",
+        false,
+        false
+    ],
+    "TU-Berlin-1.0": [
+        "Technische Universitaet Berlin License 1.0",
+        false,
+        false
+    ],
+    "TU-Berlin-2.0": [
+        "Technische Universitaet Berlin License 2.0",
         false,
         false
     ],
