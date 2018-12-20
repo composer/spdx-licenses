@@ -1,7 +1,7 @@
 {
     "0BSD": [
         "BSD Zero Clause License",
-        false,
+        true,
         false
     ],
     "AAL": [
@@ -541,6 +541,11 @@
     ],
     "Condor-1.1": [
         "Condor Public License v1.1",
+        false,
+        false
+    ],
+    "copyleft-next-0.3.0": [
+        "copyleft-next 0.3.0",
         false,
         false
     ],
