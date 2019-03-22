@@ -519,6 +519,16 @@
         false,
         false
     ],
+    "CERN-OHL-1.1": [
+        "CERN Open Hardware License v1.1",
+        false,
+        false
+    ],
+    "CERN-OHL-1.2": [
+        "CERN Open Hardware Licence v1.2",
+        false,
+        false
+    ],
     "ClArtistic": [
         "Clarified Artistic License",
         false,
@@ -912,6 +922,11 @@
     "HPND": [
         "Historical Permission Notice and Disclaimer",
         true,
+        false
+    ],
+    "HPND-sell-variant": [
+        "Historical Permission Notice and Disclaimer - sell variant",
+        false,
         false
     ],
     "IBM-pibs": [
@@ -1706,6 +1721,11 @@
     ],
     "SWL": [
         "Scheme Widget Library (SWL) Software License Agreement",
+        false,
+        false
+    ],
+    "TAPR-OHL-1.0": [
+        "TAPR Open Hardware License v1.0",
         false,
         false
     ],
