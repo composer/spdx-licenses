@@ -204,6 +204,16 @@
         false,
         false
     ],
+    "blessing": [
+        "SQLite Blessing",
+        false,
+        false
+    ],
+    "BlueOak-1.0.0": [
+        "Blue Oak Model License 1.0.0",
+        false,
+        false
+    ],
     "Borceux": [
         "Borceux license",
         false,
@@ -251,7 +261,7 @@
     ],
     "BSD-3-Clause-LBNL": [
         "Lawrence Berkeley National Labs BSD variant license",
-        false,
+        true,
         false
     ],
     "BSD-3-Clause-No-Nuclear-License": [
@@ -266,6 +276,11 @@
     ],
     "BSD-3-Clause-No-Nuclear-Warranty": [
         "BSD 3-Clause No Nuclear Warranty",
+        false,
+        false
+    ],
+    "BSD-3-Clause-Open-MPI": [
+        "BSD 3-Clause Open MPI variant",
         false,
         false
     ],
@@ -461,6 +476,11 @@
     ],
     "CC-BY-SA-4.0": [
         "Creative Commons Attribution Share Alike 4.0 International",
+        false,
+        false
+    ],
+    "CC-PDDC": [
+        "Creative Commons Public Domain Dedication and Certification",
         false,
         false
     ],
@@ -999,6 +1019,11 @@
         false,
         false
     ],
+    "JPNIC": [
+        "Japan Network Information Center License",
+        false,
+        false
+    ],
     "JSON": [
         "JSON License",
         false,
@@ -1091,6 +1116,11 @@
     ],
     "Libpng": [
         "libpng License",
+        false,
+        false
+    ],
+    "libpng-2.0": [
+        "PNG Reference Library version 2",
         false,
         false
     ],
@@ -1524,6 +1554,11 @@
         true,
         false
     ],
+    "Parity-6.0.0": [
+        "The Parity Public License 6.0.0",
+        false,
+        false
+    ],
     "PDDL-1.0": [
         "ODC Public Domain Dedication & License 1.0",
         false,
@@ -1654,6 +1689,16 @@
         false,
         false
     ],
+    "SHL-0.5": [
+        "Solderpad Hardware License v0.5",
+        false,
+        false
+    ],
+    "SHL-0.51": [
+        "Solderpad Hardware License, Version 0.51",
+        false,
+        false
+    ],
     "SimPL-2.0": [
         "Simple Public License 2.0",
         true,
@@ -1707,6 +1752,11 @@
     "SPL-1.0": [
         "Sun Public License v1.0",
         true,
+        false
+    ],
+    "SSPL-1.0": [
+        "Server Side Public License, v 1",
+        false,
         false
     ],
     "StandardML-NJ": [
