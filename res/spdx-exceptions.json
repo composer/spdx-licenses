@@ -47,6 +47,9 @@
     "gnu-javamail-exception": [
         "GNU JavaMail exception"
     ],
+    "GPL-CC-1.0": [
+        "GPL Cooperation Commitment 1.0"
+    ],
     "i2p-gpl-java-exception": [
         "i2p GPL+Java Exception"
     ],
@@ -92,8 +95,14 @@
     "Qwt-exception-1.0": [
         "Qwt exception 1.0"
     ],
+    "Swift-exception": [
+        "Swift Exception"
+    ],
     "u-boot-exception-2.0": [
         "U-Boot exception 2.0"
+    ],
+    "Universal-FOSS-exception-1.0": [
+        "Universal FOSS Exception, Version 1.0"
     ],
     "WxWindows-exception-3.1": [
         "WxWindows Library Exception 3.1"
