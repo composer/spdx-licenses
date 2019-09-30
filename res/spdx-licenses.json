@@ -1814,6 +1814,11 @@
         false,
         false
     ],
+    "UCL-1.0": [
+        "Upstream Compatibility License v1.0",
+        true,
+        false
+    ],
     "Unicode-DFS-2015": [
         "Unicode License Agreement - Data Files and Software (2015)",
         false,
