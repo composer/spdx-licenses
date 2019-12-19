@@ -1,6 +1,4 @@
 language: php
-dist: trusty
-sudo: false
 
 cache:
   directories:
@@ -12,21 +10,29 @@ git:
 
 matrix:
   include:
-  - php: 5.3
-    dist: precise
-  - php: 5.4
-  - php: 5.5
-  - php: 5.6
-  - php: 7.0
-  - php: 7.1
-  - php: 7.2
-  - php: 7.3
-  - php: 7.4snapshot
-  - php: nightly
+    - dist: precise
+      php: 5.3
+    - dist: trusty
+      php: 5.4
+    - dist: trusty
+      php: 5.5
+    - dist: xenial
+      php: 5.6
+    - dist: xenial
+      php: 7.0
+    - dist: bionic
+      php: 7.1
+    - dist: bionic
+      php: 7.2
+    - dist: bionic
+      php: 7.3
+    - dist: bionic
+      php: 7.4
+    - dist: bionic
+      php: nightly
   fast_finish: true
   allow_failures:
-  - php: 7.4snapshot
-  - php: nightly
+    - php: nightly
 
 install:
 - composer install --no-interaction --no-progress --prefer-dist --ansi
