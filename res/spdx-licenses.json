@@ -540,7 +540,7 @@
         false
     ],
     "CERN-OHL-1.1": [
-        "CERN Open Hardware License v1.1",
+        "CERN Open Hardware Licence v1.1",
         false,
         false
     ],
@@ -701,6 +701,11 @@
     ],
     "ErlPL-1.1": [
         "Erlang Public License v1.1",
+        false,
+        false
+    ],
+    "etalab-2.0": [
+        "Etalab Open License 2.0",
         false,
         false
     ],
@@ -1124,6 +1129,11 @@
         false,
         false
     ],
+    "libselinux-1.0": [
+        "libselinux public domain notice",
+        false,
+        false
+    ],
     "libtiff": [
         "libtiff License",
         false,
@@ -1190,7 +1200,7 @@
         false
     ],
     "MirOS": [
-        "MirOS License",
+        "The MirOS Licence",
         true,
         false
     ],
@@ -1201,7 +1211,7 @@
     ],
     "MIT-0": [
         "MIT No Attribution",
-        true,
+        false,
         false
     ],
     "MIT-advertising": [
@@ -1271,6 +1281,11 @@
     ],
     "MTLL": [
         "Matrix Template Library License",
+        false,
+        false
+    ],
+    "MulanPSL-1.0": [
+        "Mulan Permissive Software License, Version 1",
         false,
         false
     ],
@@ -1374,6 +1389,11 @@
         true,
         false
     ],
+    "NTP-0": [
+        "NTP No Attribution",
+        false,
+        false
+    ],
     "Nunit": [
         "Nunit License",
         false,
@@ -1404,9 +1424,34 @@
         false,
         false
     ],
+    "OFL-1.0-no-RFN": [
+        "SIL Open Font License 1.0 with no Reserved Font Name",
+        false,
+        false
+    ],
+    "OFL-1.0-RFN": [
+        "SIL Open Font License 1.0 with Reserved Font Name",
+        false,
+        false
+    ],
     "OFL-1.1": [
         "SIL Open Font License 1.1",
         true,
+        false
+    ],
+    "OFL-1.1-no-RFN": [
+        "SIL Open Font License 1.1 with no Reserved Font Name",
+        true,
+        false
+    ],
+    "OFL-1.1-RFN": [
+        "SIL Open Font License 1.1 with Reserved Font Name",
+        true,
+        false
+    ],
+    "OGL-Canada-2.0": [
+        "Open Government Licence - Canada",
+        false,
         false
     ],
     "OGL-UK-1.0": [
@@ -1584,6 +1629,11 @@
         true,
         false
     ],
+    "PSF-2.0": [
+        "Python Software Foundation License 2.0",
+        false,
+        false
+    ],
     "psfrag": [
         "psfrag License",
         false,
@@ -1754,6 +1804,16 @@
         true,
         false
     ],
+    "SSH-OpenSSH": [
+        "SSH OpenSSH license",
+        false,
+        false
+    ],
+    "SSH-short": [
+        "SSH short notice",
+        false,
+        false
+    ],
     "SSPL-1.0": [
         "Server Side Public License, v 1",
         false,
@@ -1812,6 +1872,11 @@
     "TU-Berlin-2.0": [
         "Technische Universitaet Berlin License 2.0",
         false,
+        false
+    ],
+    "UCL-1.0": [
+        "Upstream Compatibility License v1.0",
+        true,
         false
     ],
     "Unicode-DFS-2015": [
