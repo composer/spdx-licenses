@@ -221,7 +221,7 @@
     ],
     "BSD-1-Clause": [
         "BSD 1-Clause License",
-        false,
+        true,
         false
     ],
     "BSD-2-Clause": [
@@ -237,7 +237,7 @@
     "BSD-2-Clause-NetBSD": [
         "BSD 2-Clause NetBSD License",
         false,
-        false
+        true
     ],
     "BSD-2-Clause-Patent": [
         "BSD-2-Clause Plus Patent License",
@@ -317,6 +317,16 @@
     "bzip2-1.0.6": [
         "bzip2 and libbzip2 License v1.0.6",
         false,
+        false
+    ],
+    "CAL-1.0": [
+        "Cryptographic Autonomy License 1.0",
+        true,
+        false
+    ],
+    "CAL-1.0-Combined-Work-Exception": [
+        "Cryptographic Autonomy License 1.0 (Combined Work Exception)",
+        true,
         false
     ],
     "Caldera": [
@@ -546,6 +556,21 @@
     ],
     "CERN-OHL-1.2": [
         "CERN Open Hardware Licence v1.2",
+        false,
+        false
+    ],
+    "CERN-OHL-P-2.0": [
+        "CERN Open Hardware Licence Version 2 - Permissive",
+        false,
+        false
+    ],
+    "CERN-OHL-S-2.0": [
+        "CERN Open Hardware Licence Version 2 - Strongly Reciprocal",
+        false,
+        false
+    ],
+    "CERN-OHL-W-2.0": [
+        "CERN Open Hardware Licence Version 2 - Weakly Reciprocal",
         false,
         false
     ],
@@ -944,6 +969,11 @@
         false,
         false
     ],
+    "Hippocratic-2.1": [
+        "Hippocratic License 2.1",
+        false,
+        false
+    ],
     "HPND": [
         "Historical Permission Notice and Disclaimer",
         true,
@@ -1289,6 +1319,11 @@
         false,
         false
     ],
+    "MulanPSL-2.0": [
+        "Mulan Permissive Software License, Version 2",
+        true,
+        false
+    ],
     "Multics": [
         "Multics License",
         true,
@@ -1311,6 +1346,11 @@
     ],
     "NBPL-1.0": [
         "Net Boolean Public License v1",
+        false,
+        false
+    ],
+    "NCGL-UK-2.0": [
+        "Non-Commercial Government Licence",
         false,
         false
     ],
@@ -1399,6 +1439,11 @@
         false,
         true
     ],
+    "O-UDA-1.0": [
+        "Open Use of Data Agreement v1.0",
+        false,
+        false
+    ],
     "OCCT-PL": [
         "Open CASCADE Technology Public License",
         false,
@@ -1447,6 +1492,11 @@
     "OFL-1.1-RFN": [
         "SIL Open Font License 1.1 with Reserved Font Name",
         true,
+        false
+    ],
+    "OGC-1.0": [
+        "OGC Software License, Version 1.0",
+        false,
         false
     ],
     "OGL-Canada-2.0": [
@@ -1604,6 +1654,11 @@
         false,
         false
     ],
+    "Parity-7.0.0": [
+        "The Parity Public License 7.0.0",
+        false,
+        false
+    ],
     "PDDL-1.0": [
         "ODC Public Domain Dedication & License 1.0",
         false,
@@ -1621,6 +1676,16 @@
     ],
     "Plexus": [
         "Plexus Classworlds License",
+        false,
+        false
+    ],
+    "PolyForm-Noncommercial-1.0.0": [
+        "PolyForm Noncommercial License 1.0.0",
+        false,
+        false
+    ],
+    "PolyForm-Small-Business-1.0.0": [
+        "PolyForm Small Business License 1.0.0",
         false,
         false
     ],
