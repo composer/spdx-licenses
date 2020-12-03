@@ -114,6 +114,11 @@
         false,
         false
     ],
+    "ANTLR-PD-fallback": [
+        "ANTLR Software Rights Notice with license fallback",
+        false,
+        false
+    ],
     "Apache-1.0": [
         "Apache License 1.0",
         false,
@@ -314,6 +319,11 @@
         true,
         false
     ],
+    "BUSL-1.1": [
+        "Business Source License 1.1",
+        false,
+        false
+    ],
     "bzip2-1.0.5": [
         "bzip2 and libbzip2 License v1.0.5",
         false,
@@ -366,6 +376,11 @@
     ],
     "CC-BY-3.0-AT": [
         "Creative Commons Attribution 3.0 Austria",
+        false,
+        false
+    ],
+    "CC-BY-3.0-US": [
+        "Creative Commons Attribution 3.0 United States",
         false,
         false
     ],
@@ -486,6 +501,11 @@
     ],
     "CC-BY-SA-2.0": [
         "Creative Commons Attribution Share Alike 2.0 Generic",
+        false,
+        false
+    ],
+    "CC-BY-SA-2.0-UK": [
+        "Creative Commons Attribution Share Alike 2.0 England and Wales",
         false,
         false
     ],
@@ -1074,6 +1094,11 @@
         false,
         false
     ],
+    "HTMLTIDY": [
+        "HTML Tidy License",
+        false,
+        false
+    ],
     "IBM-pibs": [
         "IBM PowerPC Initialization and Boot Software",
         false,
@@ -1331,7 +1356,7 @@
     ],
     "MIT-0": [
         "MIT No Attribution",
-        false,
+        true,
         false
     ],
     "MIT-advertising": [
@@ -1351,6 +1376,11 @@
     ],
     "MIT-feh": [
         "feh License",
+        false,
+        false
+    ],
+    "MIT-open-group": [
+        "MIT Open Group variant",
         false,
         false
     ],
@@ -1701,7 +1731,7 @@
     ],
     "OLDAP-2.8": [
         "Open LDAP Public License v2.8",
-        false,
+        true,
         false
     ],
     "OML": [
@@ -2051,7 +2081,7 @@
     ],
     "Unicode-DFS-2016": [
         "Unicode License Agreement - Data Files and Software (2016)",
-        false,
+        true,
         false
     ],
     "Unicode-TOU": [

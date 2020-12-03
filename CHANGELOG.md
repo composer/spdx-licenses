@@ -5,7 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [master]
 
-  * Changed: updated licenses list to SPDX 3.10
+  * Changed: updated licenses list to SPDX 3.11
   ...
 
 ## [1.5.4] 2020-07-15
