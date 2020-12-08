@@ -152,7 +152,7 @@ class SpdxLicensesTest extends TestCase
     {
         /** @var SPDXLicense $license */
         $license = $this->licenses->getLicenseByIdentifier('AGPL-1.0-only');
-        $this->assertIsArray($license);
+        $this->assertTrue(is_array($license));
         $this->assertEquals('Affero General Public License v1.0 only', $license[0]);
         $this->assertFalse($license[1]);
         $this->assertStringStartsWith('https://spdx.org/licenses/', $license[2]);
@@ -187,7 +187,7 @@ class SpdxLicensesTest extends TestCase
 
         /** @var SPDXLicenseException $license */
         $license = $this->licenses->getExceptionByIdentifier('Font-exception-2.0');
-        $this->assertIsArray($license);
+        $this->assertTrue(is_array($license));
         $this->assertSame('Font exception 2.0', $license[0]);
     }
 
