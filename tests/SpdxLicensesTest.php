@@ -47,12 +47,13 @@ class SpdxLicensesTest extends TestCase
 
     /**
      * @dataProvider provideInvalidArgument
-     * @expectedException \InvalidArgumentException
      *
      * @param mixed $invalidArgument
      */
     public function testInvalidArgument($invalidArgument)
     {
+        $this->setExpectedException('InvalidArgumentException');
+
         $this->licenses->validate($invalidArgument);
     }
 
@@ -160,7 +161,7 @@ class SpdxLicensesTest extends TestCase
         $this->assertNull($licenseNull);
 
         $license = $this->licenses->getExceptionByIdentifier('Font-exception-2.0');
-        $this->assertInternalType('array', $license);
+        $this->assertisArray($license);
         $this->assertSame('Font exception 2.0', $license[0]);
     }
 
@@ -287,5 +288,25 @@ class SpdxLicensesTest extends TestCase
             array(array('mixed', new \stdClass())),
             array(array(new \stdClass(), new \stdClass())),
         );
+    }
+
+    /**
+     * @param string      $exception
+     * @param string|null $message
+     * @param int|null    $code
+     */
+    public function setExpectedException($exception, $message = null, $code = null)
+    {
+        if (!class_exists('PHPUnit\Framework\Error\Notice')) {
+            $exception = str_replace('PHPUnit\\Framework\\Error\\', 'PHPUnit_Framework_Error_', $exception);
+        }
+        if (method_exists($this, 'expectException')) {
+            $this->expectException($exception);
+            if (null !== $message) {
+                $this->expectExceptionMessage($message);
+            }
+        } else {
+            parent::setExpectedException($exception, $message, $code);
+        }
     }
 }
