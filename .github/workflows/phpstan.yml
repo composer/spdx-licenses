@@ -17,7 +17,8 @@ jobs:
     strategy:
       matrix:
         php-version:
-          - "8.0"
+          # pinned to 7.4 because we need PHPUnit 7.5 which does not support PHP 8
+          - "7.4"
 
     steps:
       - name: "Checkout"
