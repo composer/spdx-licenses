@@ -6,7 +6,7 @@ SPDX (Software Package Data Exchange) licenses list and validation library.
 Originally written as part of [composer/composer](https://github.com/composer/composer),
 now extracted and made available as a stand-alone library.
 
-[![Build Status](https://travis-ci.org/composer/spdx-licenses.svg?branch=master)](https://travis-ci.org/composer/spdx-licenses)
+[![Continuous Integration](https://github.com/composer/spdx-licenses/workflows/Continuous%20Integration/badge.svg?branch=main)](https://github.com/composer/spdx-licenses/actions)
 
 Installation
 ------------
