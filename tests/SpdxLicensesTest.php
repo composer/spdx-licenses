@@ -20,6 +20,9 @@ class SpdxLicensesTest extends TestCase
      */
     private $licenses;
 
+    /**
+     * @return void
+     */
     public function setUp()
     {
         $this->licenses = new SpdxLicenses();
@@ -28,7 +31,8 @@ class SpdxLicensesTest extends TestCase
     /**
      * @dataProvider provideValidLicenses
      *
-     * @param string|array $license
+     * @param string|string[] $license
+     * @return void
      */
     public function testValidate($license)
     {
@@ -38,7 +42,8 @@ class SpdxLicensesTest extends TestCase
     /**
      * @dataProvider provideInvalidLicenses
      *
-     * @param string|array $invalidLicense
+     * @param string|string[] $invalidLicense
+     * @return void
      */
     public function testInvalidLicenses($invalidLicense)
     {
@@ -49,6 +54,7 @@ class SpdxLicensesTest extends TestCase
      * @dataProvider provideInvalidArgument
      *
      * @param mixed $invalidArgument
+     * @return void
      */
     public function testInvalidArgument($invalidArgument)
     {
@@ -59,6 +65,7 @@ class SpdxLicensesTest extends TestCase
 
     /**
      * @testdox Resources directory exists at expected locatation.
+     * @return void
      */
     public function testGetResourcesDir()
     {
@@ -81,6 +88,7 @@ class SpdxLicensesTest extends TestCase
      * @dataProvider provideResourceFiles
      *
      * @param string $file
+     * @return void
      */
     public function testResourceFilesExist($file)
     {
@@ -95,10 +103,16 @@ class SpdxLicensesTest extends TestCase
      * @dataProvider provideResourceFiles
      *
      * @param string $file
+     * @return void
      */
     public function testResourceFilesContainJson($file)
     {
-        $json = json_decode(file_get_contents(SpdxLicenses::getResourcesDir() . '/' . $file), true);
+        $contents = file_get_contents(SpdxLicenses::getResourcesDir() . '/' . $file);
+        if (false === $contents) {
+            $this->fail('Could not read the license file at '.SpdxLicenses::getResourcesDir() . '/' . $file);
+            return;
+        }
+        $json = json_decode($contents, true);
 
         if (null === $json && json_last_error()) {
             switch (json_last_error()) {
@@ -131,9 +145,14 @@ class SpdxLicensesTest extends TestCase
         $this->assertNotEmpty($json);
     }
 
+    /**
+     * @return void
+     */
     public function testGetLicenseByIdentifier()
     {
+        /** @var SPDXLicense $license */
         $license = $this->licenses->getLicenseByIdentifier('AGPL-1.0-only');
+        $this->assertIsArray($license);
         $this->assertEquals('Affero General Public License v1.0 only', $license[0]);
         $this->assertFalse($license[1]);
         $this->assertStringStartsWith('https://spdx.org/licenses/', $license[2]);
@@ -143,6 +162,9 @@ class SpdxLicensesTest extends TestCase
         $this->assertNull($licenseNull);
     }
 
+    /**
+     * @return void
+     */
     public function testGetLicenses()
     {
         $results = $this->licenses->getLicenses();
@@ -155,16 +177,23 @@ class SpdxLicensesTest extends TestCase
         $this->assertEquals(false, $results['cc-by-sa-4.0'][3]);
     }
 
+    /**
+     * @return void
+     */
     public function testGetExceptionByIdentifier()
     {
         $licenseNull = $this->licenses->getExceptionByIdentifier('Font-exception-2.0-Errorl');
         $this->assertNull($licenseNull);
 
+        /** @var SPDXLicenseException $license */
         $license = $this->licenses->getExceptionByIdentifier('Font-exception-2.0');
-        $this->assertisArray($license);
+        $this->assertIsArray($license);
         $this->assertSame('Font exception 2.0', $license[0]);
     }
 
+    /**
+     * @return void
+     */
     public function testGetIdentifierByName()
     {
         $identifier = $this->licenses->getIdentifierByName('Affero General Public License v1.0');
@@ -180,6 +209,9 @@ class SpdxLicensesTest extends TestCase
         $this->assertNull($identifier);
     }
 
+    /**
+     * @return void
+     */
     public function testIsOsiApprovedByIdentifier()
     {
         $osiApproved = $this->licenses->isOsiApprovedByIdentifier('MIT');
@@ -189,6 +221,9 @@ class SpdxLicensesTest extends TestCase
         $this->assertFalse($osiApproved);
     }
 
+    /**
+     * @return void
+     */
     public function testIsDeprecatedByIdentifier()
     {
         $deprecated = $this->licenses->isDeprecatedByIdentifier('GPL-3.0');
@@ -199,7 +234,7 @@ class SpdxLicensesTest extends TestCase
     }
 
     /**
-     * @return array
+     * @return array[]
      */
     public function provideResourceFiles()
     {
@@ -210,12 +245,16 @@ class SpdxLicensesTest extends TestCase
     }
 
     /**
-     * @return array
+     * @return array<int, string|string[]>
      */
     public function provideValidLicenses()
     {
-        $json = file_get_contents(SpdxLicenses::getResourcesDir() . '/' . SpdxLicenses::LICENSES_FILE);
-        $licenses = json_decode($json, true);
+        $contents = file_get_contents(SpdxLicenses::getResourcesDir() . '/' . SpdxLicenses::LICENSES_FILE);
+        if (false === $contents) {
+            throw new \LogicException('Could not read the license file at '.SpdxLicenses::getResourcesDir() . '/' . SpdxLicenses::LICENSES_FILE);
+        }
+        $licenses = json_decode($contents, true);
+        /** @var string[] $identifiers */
         $identifiers = array_keys($licenses);
 
         $valid = array_merge(
@@ -248,7 +287,7 @@ class SpdxLicensesTest extends TestCase
     }
 
     /**
-     * @return array
+     * @return array[]
      */
     public function provideInvalidLicenses()
     {
@@ -277,7 +316,7 @@ class SpdxLicensesTest extends TestCase
     }
 
     /**
-     * @return array
+     * @return array[]
      */
     public function provideInvalidArgument()
     {
@@ -294,6 +333,7 @@ class SpdxLicensesTest extends TestCase
      * @param string      $exception
      * @param string|null $message
      * @param int|null    $code
+     * @return void
      */
     public function setExpectedException($exception, $message = null, $code = null)
     {
@@ -306,6 +346,7 @@ class SpdxLicensesTest extends TestCase
                 $this->expectExceptionMessage($message);
             }
         } else {
+            /** @phpstan-ignore-next-line */
             parent::setExpectedException($exception, $message, $code);
         }
     }

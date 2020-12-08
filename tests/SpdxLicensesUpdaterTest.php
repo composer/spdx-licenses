@@ -16,12 +16,21 @@ use PHPUnit\Framework\TestCase;
 class SpdxLicensesUpdaterTest extends TestCase
 {
     /**
-     * @var SpdxLicenses
+     * @var SpdxLicensesUpdater
      */
     private $updater;
-    private $licenseFiles;
+    /**
+     * @var string
+     */
+    private $licenseFile;
+    /**
+     * @var string
+     */
     private $exceptionFile;
 
+    /**
+     * @return void
+     */
     public function setUp()
     {
         $this->updater = new SpdxLicensesUpdater();
@@ -29,12 +38,18 @@ class SpdxLicensesUpdaterTest extends TestCase
         $this->exceptionFile = __DIR__ . '/../res/exceptions.json';
     }
 
+    /**
+     * @return void
+     */
     public function tearDown()
     {
         @unlink($this->licenseFile);
         @unlink($this->exceptionFile);
     }
 
+    /**
+     * @return void
+     */
     public function testDumpLicenses()
     {
         $this->updater->dumpLicenses();
@@ -44,6 +59,9 @@ class SpdxLicensesUpdaterTest extends TestCase
         $this->assertFileExists($this->licenseFile);
     }
 
+    /**
+     * @return void
+     */
     public function testDumpExceptions()
     {
         $this->updater->dumpExceptions();
