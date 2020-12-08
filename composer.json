@@ -33,7 +33,8 @@
         "php": "^5.3.2 || ^7.0 || ^8.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "^4.8.35 || ^5.7 || 6.5 - 7"
+        "symfony/phpunit-bridge": "^4.2 || ^5",
+        "phpstan/phpstan": "^0.12.55"
     },
     "autoload": {
         "psr-4": {
@@ -51,6 +52,7 @@
         }
     },
     "scripts": {
-        "test": "phpunit"
+        "test": "SYMFONY_PHPUNIT_REMOVE_RETURN_TYPEHINT=1 vendor/bin/simple-phpunit",
+        "sync-licenses": "bin/update-spdx-licenses"
     }
 }
