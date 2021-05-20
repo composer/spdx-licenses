@@ -279,6 +279,11 @@
         false,
         false
     ],
+    "BSD-3-Clause-No-Military-License": [
+        "BSD 3-Clause No Military License",
+        false,
+        false
+    ],
     "BSD-3-Clause-No-Nuclear-License": [
         "BSD 3-Clause No Nuclear License",
         false,
@@ -540,7 +545,7 @@
         false
     ],
     "CC-BY-SA-3.0-AT": [
-        "Creative Commons Attribution-Share Alike 3.0 Austria",
+        "Creative Commons Attribution Share Alike 3.0 Austria",
         false,
         false
     ],
@@ -566,6 +571,11 @@
     ],
     "CDDL-1.1": [
         "Common Development and Distribution License 1.1",
+        false,
+        false
+    ],
+    "CDL-1.0": [
+        "Common Documentation License 1.0",
         false,
         false
     ],
