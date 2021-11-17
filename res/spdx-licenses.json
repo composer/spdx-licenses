@@ -389,6 +389,11 @@
         false,
         false
     ],
+    "CC-BY-2.5-AU": [
+        "Creative Commons Attribution 2.5 Australia",
+        false,
+        false
+    ],
     "CC-BY-3.0": [
         "Creative Commons Attribution 3.0 Unported",
         false,
@@ -396,6 +401,16 @@
     ],
     "CC-BY-3.0-AT": [
         "Creative Commons Attribution 3.0 Austria",
+        false,
+        false
+    ],
+    "CC-BY-3.0-DE": [
+        "Creative Commons Attribution 3.0 Germany",
+        false,
+        false
+    ],
+    "CC-BY-3.0-NL": [
+        "Creative Commons Attribution 3.0 Netherlands",
         false,
         false
     ],
@@ -429,6 +444,11 @@
         false,
         false
     ],
+    "CC-BY-NC-3.0-DE": [
+        "Creative Commons Attribution Non Commercial 3.0 Germany",
+        false,
+        false
+    ],
     "CC-BY-NC-4.0": [
         "Creative Commons Attribution Non Commercial 4.0 International",
         false,
@@ -454,6 +474,11 @@
         false,
         false
     ],
+    "CC-BY-NC-ND-3.0-DE": [
+        "Creative Commons Attribution Non Commercial No Derivatives 3.0 Germany",
+        false,
+        false
+    ],
     "CC-BY-NC-ND-3.0-IGO": [
         "Creative Commons Attribution Non Commercial No Derivatives 3.0 IGO",
         false,
@@ -474,6 +499,16 @@
         false,
         false
     ],
+    "CC-BY-NC-SA-2.0-FR": [
+        "Creative Commons Attribution-NonCommercial-ShareAlike 2.0 France",
+        false,
+        false
+    ],
+    "CC-BY-NC-SA-2.0-UK": [
+        "Creative Commons Attribution Non Commercial Share Alike 2.0 England and Wales",
+        false,
+        false
+    ],
     "CC-BY-NC-SA-2.5": [
         "Creative Commons Attribution Non Commercial Share Alike 2.5 Generic",
         false,
@@ -481,6 +516,16 @@
     ],
     "CC-BY-NC-SA-3.0": [
         "Creative Commons Attribution Non Commercial Share Alike 3.0 Unported",
+        false,
+        false
+    ],
+    "CC-BY-NC-SA-3.0-DE": [
+        "Creative Commons Attribution Non Commercial Share Alike 3.0 Germany",
+        false,
+        false
+    ],
+    "CC-BY-NC-SA-3.0-IGO": [
+        "Creative Commons Attribution Non Commercial Share Alike 3.0 IGO",
         false,
         false
     ],
@@ -506,6 +551,11 @@
     ],
     "CC-BY-ND-3.0": [
         "Creative Commons Attribution No Derivatives 3.0 Unported",
+        false,
+        false
+    ],
+    "CC-BY-ND-3.0-DE": [
+        "Creative Commons Attribution No Derivatives 3.0 Germany",
         false,
         false
     ],
@@ -549,6 +599,11 @@
         false,
         false
     ],
+    "CC-BY-SA-3.0-DE": [
+        "Creative Commons Attribution Share Alike 3.0 Germany",
+        false,
+        false
+    ],
     "CC-BY-SA-4.0": [
         "Creative Commons Attribution Share Alike 4.0 International",
         false,
@@ -581,6 +636,11 @@
     ],
     "CDLA-Permissive-1.0": [
         "Community Data License Agreement Permissive 1.0",
+        false,
+        false
+    ],
+    "CDLA-Permissive-2.0": [
+        "Community Data License Agreement Permissive 2.0",
         false,
         false
     ],
@@ -661,6 +721,16 @@
     ],
     "CNRI-Python-GPL-Compatible": [
         "CNRI Python Open Source GPL Compatible License Agreement",
+        false,
+        false
+    ],
+    "COIL-1.0": [
+        "Copyfree Open Innovation License",
+        false,
+        false
+    ],
+    "Community-Spec-1.0": [
+        "Community Specification License 1.0",
         false,
         false
     ],
@@ -842,6 +912,11 @@
     "Fair": [
         "Fair License",
         true,
+        false
+    ],
+    "FDK-AAC": [
+        "Fraunhofer FDK AAC Codec Library",
+        false,
         false
     ],
     "Frameworx-1.0": [
@@ -1344,6 +1419,11 @@
         true,
         false
     ],
+    "Linux-man-pages-copyleft": [
+        "Linux man-pages Copyleft",
+        false,
+        false
+    ],
     "Linux-OpenIB": [
         "Linux Kernel Variant of OpenIB.org license",
         false,
@@ -1565,7 +1645,12 @@
         false
     ],
     "NLOD-1.0": [
-        "Norwegian Licence for Open Government Data",
+        "Norwegian Licence for Open Government Data (NLOD) 1.0",
+        false,
+        false
+    ],
+    "NLOD-2.0": [
+        "Norwegian Licence for Open Government Data (NLOD) 2.0",
         false,
         false
     ],
@@ -1806,6 +1891,11 @@
     ],
     "OPL-1.0": [
         "Open Public License v1.0",
+        false,
+        false
+    ],
+    "OPUBL-1.0": [
+        "Open Publication License v1.0",
         false,
         false
     ],
@@ -2206,7 +2296,7 @@
     ],
     "wxWindows": [
         "wxWindows Library License",
-        false,
+        true,
         true
     ],
     "X11": [
@@ -2296,7 +2386,7 @@
     ],
     "ZPL-2.1": [
         "Zope Public License 2.1",
-        false,
+        true,
         false
     ]
 }
