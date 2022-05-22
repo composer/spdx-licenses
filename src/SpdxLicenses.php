@@ -309,10 +309,10 @@ class SpdxLicenses
     (?<idstring>[\pL\pN.-]{1,})
 
     # license-id: taken from list
-    (?<licenseid>${licenses})
+    (?<licenseid>{$licenses})
 
     # license-exception-id: taken from list
-    (?<licenseexceptionid>${exceptions})
+    (?<licenseexceptionid>{$exceptions})
 
     # license-ref: [DocumentRef-1*(idstring):]LicenseRef-1*(idstring)
     (?<licenseref>(?:DocumentRef-(?&idstring):)?LicenseRef-(?&idstring))
