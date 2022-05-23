@@ -144,6 +144,11 @@
         true,
         false
     ],
+    "App-s2p": [
+        "App::s2p License",
+        false,
+        false
+    ],
     "APSL-1.0": [
         "Apple Public Source License 1.0",
         true,
@@ -162,6 +167,11 @@
     "APSL-2.0": [
         "Apple Public Source License 2.0",
         true,
+        false
+    ],
+    "Arphic-1999": [
+        "Arphic Public License",
+        false,
         false
     ],
     "Artistic-1.0": [
@@ -184,6 +194,11 @@
         true,
         false
     ],
+    "Baekmuk": [
+        "Baekmuk License",
+        false,
+        false
+    ],
     "Bahyph": [
         "Bahyph License",
         false,
@@ -196,6 +211,11 @@
     ],
     "Beerware": [
         "Beerware License",
+        false,
+        false
+    ],
+    "Bitstream-Vera": [
+        "Bitstream Vera Font License",
         false,
         false
     ],
@@ -342,7 +362,7 @@
     "bzip2-1.0.5": [
         "bzip2 and libbzip2 License v1.0.5",
         false,
-        false
+        true
     ],
     "bzip2-1.0.6": [
         "bzip2 and libbzip2 License v1.0.6",
@@ -799,6 +819,11 @@
         false,
         false
     ],
+    "DL-DE-BY-2.0": [
+        "Data licence Germany \u2013 attribution \u2013 version 2.0",
+        false,
+        false
+    ],
     "DOC": [
         "DOC License",
         false,
@@ -851,6 +876,11 @@
     ],
     "eGenix": [
         "eGenix.com Public License 1.1.0",
+        false,
+        false
+    ],
+    "Elastic-2.0": [
+        "Elastic License 2.0",
         false,
         false
     ],
@@ -1284,6 +1314,11 @@
         true,
         false
     ],
+    "Jam": [
+        "Jam License",
+        true,
+        false
+    ],
     "JasPer-2.0": [
         "JasPer License",
         false,
@@ -1296,6 +1331,11 @@
     ],
     "JSON": [
         "JSON License",
+        false,
+        false
+    ],
+    "KiCad-libraries-exception": [
+        "KiCad Libraries Exception",
         false,
         false
     ],
@@ -1547,6 +1587,11 @@
     "MPL-2.0-no-copyleft-exception": [
         "Mozilla Public License 2.0 (no copyleft exception)",
         true,
+        false
+    ],
+    "mplus": [
+        "mplus Font License",
+        false,
         false
     ],
     "MS-PL": [
@@ -2059,6 +2104,11 @@
         false,
         false
     ],
+    "SchemeReport": [
+        "Scheme Language Report License",
+        false,
+        false
+    ],
     "Sendmail": [
         "Sendmail License",
         false,
@@ -2301,6 +2351,11 @@
     ],
     "X11": [
         "X11 License",
+        false,
+        false
+    ],
+    "X11-distribute-modifications-variant": [
+        "X11 License Distribution Modification Variant",
         false,
         false
     ],
