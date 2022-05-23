@@ -5,7 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [main]
 
-  ...
+  * Changed: `${var}` PHP 8.2 deprecations resolved
 
 ## [1.5.6] 2021-11-18
 
