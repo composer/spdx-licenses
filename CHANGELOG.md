@@ -5,6 +5,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [main]
 
+  * ...
+
+## [.1.5.6] 2022-05-23
+
   * Changed: updated licenses list to SPDX 3.17
   * Changed: `${var}` PHP 8.2 deprecations resolved
 
@@ -94,7 +98,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
     - Classname: `Updater` -> `SpdxLicensesUpdater`
   * Changed: validation via regex implementation instead of lexer.
 
-[main]: https://github.com/composer/spdx-licenses/compare/1.5.6...main
+[main]: https://github.com/composer/spdx-licenses/compare/1.5.7...main
+[1.5.7]: https://github.com/composer/spdx-licenses/compare/1.5.6...1.5.7
 [1.5.6]: https://github.com/composer/spdx-licenses/compare/1.5.5...1.5.6
 [1.5.5]: https://github.com/composer/spdx-licenses/compare/1.5.4...1.5.5
 [1.5.4]: https://github.com/composer/spdx-licenses/compare/1.5.3...1.5.4
