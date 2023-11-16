@@ -24,7 +24,7 @@ class SpdxLicensesUpdater
      * @param string $url
      * @return void
      */
-    public function dumpLicenses($file = null, $url = 'https://raw.githubusercontent.com/spdx/license-list-data/master/json/licenses.json')
+    public function dumpLicenses($file = null, $url = 'https://raw.githubusercontent.com/spdx/license-list-data/main/json/licenses.json')
     {
         if (null === $file) {
             $file = SpdxLicenses::getResourcesDir() . '/' . SpdxLicenses::LICENSES_FILE;
@@ -49,7 +49,7 @@ class SpdxLicensesUpdater
      * @param string $url
      * @return void
      */
-    public function dumpExceptions($file = null, $url = 'https://raw.githubusercontent.com/spdx/license-list-data/master/json/exceptions.json')
+    public function dumpExceptions($file = null, $url = 'https://raw.githubusercontent.com/spdx/license-list-data/main/json/exceptions.json')
     {
         if (null === $file) {
             $file = SpdxLicenses::getResourcesDir() . '/' . SpdxLicenses::EXCEPTIONS_FILE;
