@@ -7,7 +7,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
   * ...
 
-## [.1.5.6] 2022-05-23
+## [1.5.8] 2023-11-20
+
+  * composer.json: Update IRC Support link by @reedy in https://github.com/composer/spdx-licenses/pull/43
+  * chore(spdx-list): update license list to SPDX 3.22 by @GMishx in https://github.com/composer/spdx-licenses/pull/44
+
+## [1.5.7] 2022-05-23
 
   * Changed: updated licenses list to SPDX 3.17
   * Changed: `${var}` PHP 8.2 deprecations resolved
@@ -98,7 +103,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
     - Classname: `Updater` -> `SpdxLicensesUpdater`
   * Changed: validation via regex implementation instead of lexer.
 
-[main]: https://github.com/composer/spdx-licenses/compare/1.5.7...main
+[main]: https://github.com/composer/spdx-licenses/compare/1.5.8...main
+[1.5.8]: https://github.com/composer/spdx-licenses/compare/1.5.7...1.5.8
 [1.5.7]: https://github.com/composer/spdx-licenses/compare/1.5.6...1.5.7
 [1.5.6]: https://github.com/composer/spdx-licenses/compare/1.5.5...1.5.6
 [1.5.5]: https://github.com/composer/spdx-licenses/compare/1.5.4...1.5.5
