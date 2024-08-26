@@ -234,7 +234,7 @@ class SpdxLicensesTest extends TestCase
     }
 
     /**
-     * @return array[]
+     * @return array<array{SpdxLicenses::*}>
      */
     public function provideResourceFiles()
     {
@@ -287,7 +287,7 @@ class SpdxLicensesTest extends TestCase
     }
 
     /**
-     * @return array[]
+     * @return array<array{string|string[]}>
      */
     public function provideInvalidLicenses()
     {
@@ -316,7 +316,7 @@ class SpdxLicensesTest extends TestCase
     }
 
     /**
-     * @return array[]
+     * @return array<array<mixed>>
      */
     public function provideInvalidArgument()
     {
@@ -330,7 +330,7 @@ class SpdxLicensesTest extends TestCase
     }
 
     /**
-     * @param string      $exception
+     * @param class-string<\Throwable> $exception
      * @param string|null $message
      * @param int|null    $code
      * @return void
@@ -338,6 +338,7 @@ class SpdxLicensesTest extends TestCase
     public function setExpectedException($exception, $message = null, $code = null)
     {
         if (!class_exists('PHPUnit\Framework\Error\Notice')) {
+            /** @var class-string<\Throwable> */
             $exception = str_replace('PHPUnit\\Framework\\Error\\', 'PHPUnit_Framework_Error_', $exception);
         }
         if (method_exists($this, 'expectException')) {
