@@ -3,9 +3,9 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## [main]
+## [1.5.9] 2025-05-12
 
-  * ...
+  * Changed: updated licenses list to SPDX 3.26.0
 
 ## [1.5.8] 2023-11-20
 
