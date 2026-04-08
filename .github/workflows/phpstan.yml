@@ -16,7 +16,7 @@ jobs:
     strategy:
       matrix:
         php-version:
-          # pinned to 7.4 because we need PHPUnit 7.5 which does not support PHP 8
+          # pinned to 7.4 because we need PHPUnit 8.5 which does not support PHP 8
           - "7.4"
 
     steps:
@@ -32,7 +32,7 @@ jobs:
           dependency-versions: highest
 
       - name: Run PHPStan
-        # Locked to phpunit 7.5 here as newer ones have void return types which break inheritance
+        # Locked to phpunit 8.5 here as newer ones have void return types which break inheritance
         run: |
-          composer require --dev phpunit/phpunit:^7.5.20 --with-all-dependencies ${{ env.COMPOSER_FLAGS }}
+          composer require --dev phpunit/phpunit:^8.5 --with-all-dependencies
           vendor/bin/phpstan analyse
