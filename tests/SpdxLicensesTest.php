@@ -20,10 +20,7 @@ class SpdxLicensesTest extends TestCase
      */
     private $licenses;
 
-    /**
-     * @return void
-     */
-    public function setUp()
+    public function setUp(): void
     {
         $this->licenses = new SpdxLicenses();
     }
@@ -110,7 +107,6 @@ class SpdxLicensesTest extends TestCase
         $contents = file_get_contents(SpdxLicenses::getResourcesDir() . '/' . $file);
         if (false === $contents) {
             $this->fail('Could not read the license file at '.SpdxLicenses::getResourcesDir() . '/' . $file);
-            return;
         }
         $json = json_decode($contents, true);
 

@@ -28,29 +28,20 @@ class SpdxLicensesUpdaterTest extends TestCase
      */
     private $exceptionFile;
 
-    /**
-     * @return void
-     */
-    public function setUp()
+    public function setUp(): void
     {
         $this->updater = new SpdxLicensesUpdater();
         $this->licenseFile = __DIR__ . '/../res/licenses.json';
         $this->exceptionFile = __DIR__ . '/../res/exceptions.json';
     }
 
-    /**
-     * @return void
-     */
-    public function tearDown()
+    public function tearDown(): void
     {
         @unlink($this->licenseFile);
         @unlink($this->exceptionFile);
     }
 
-    /**
-     * @return void
-     */
-    public function testDumpLicenses()
+    public function testDumpLicenses(): void
     {
         $this->updater->dumpLicenses();
         $this->assertFileExists(SpdxLicenses::getResourcesDir() . '/' . SpdxLicenses::LICENSES_FILE);
@@ -59,10 +50,7 @@ class SpdxLicensesUpdaterTest extends TestCase
         $this->assertFileExists($this->licenseFile);
     }
 
-    /**
-     * @return void
-     */
-    public function testDumpExceptions()
+    public function testDumpExceptions(): void
     {
         $this->updater->dumpExceptions();
         $this->assertFileExists(SpdxLicenses::getResourcesDir() . '/' . SpdxLicenses::EXCEPTIONS_FILE);
