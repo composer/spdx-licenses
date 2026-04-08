@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 /*
  * This file is part of composer/spdx-licenses.
@@ -234,10 +234,10 @@ class SpdxLicensesTest extends TestCase
      */
     public function provideResourceFiles()
     {
-        return array(
-            array(SpdxLicenses::LICENSES_FILE),
-            array(SpdxLicenses::EXCEPTIONS_FILE),
-        );
+        return [
+            [SpdxLicenses::LICENSES_FILE],
+            [SpdxLicenses::EXCEPTIONS_FILE],
+        ];
     }
 
     /**
@@ -254,29 +254,29 @@ class SpdxLicensesTest extends TestCase
         $identifiers = array_keys($licenses);
 
         $valid = array_merge(
-            array(
+            [
                 'MIT',
                 'MIT+',
-                array('(MIT)'),
+                ['(MIT)'],
                 'NONE',
                 'NOASSERTION',
                 'LicenseRef-3',
-                array('LGPL-2.0-only', 'GPL-3.0-or-later'),
+                ['LGPL-2.0-only', 'GPL-3.0-or-later'],
                 '(LGPL-2.0-only or GPL-3.0-or-later)',
                 '(LGPL-2.0-only OR GPL-3.0-or-later)',
-                array('EUDatagrid and GPL-3.0-or-later'),
+                ['EUDatagrid and GPL-3.0-or-later'],
                 '(EUDatagrid and GPL-3.0-or-later)',
                 '(EUDatagrid AND GPL-3.0-or-later)',
                 'GPL-2.0-only with Autoconf-exception-2.0',
                 'GPL-2.0-only WITH Autoconf-exception-2.0',
                 'GPL-2.0-or-later WITH Autoconf-exception-2.0',
-                array('(GPL-3.0-only and GPL-2.0-only or GPL-3.0-or-later)'),
-            ),
+                ['(GPL-3.0-only and GPL-2.0-only or GPL-3.0-or-later)'],
+            ],
             $identifiers
         );
 
         foreach ($valid as &$r) {
-            $r = array($r);
+            $r = [$r];
         }
 
         return $valid;
@@ -287,28 +287,28 @@ class SpdxLicensesTest extends TestCase
      */
     public function provideInvalidLicenses()
     {
-        return array(
-            array(''),
-            array(array()),
-            array('The system pwns you'),
-            array('()'),
-            array('(MIT'),
-            array('MIT)'),
-            array('MIT NONE'),
-            array('MIT AND NONE'),
-            array('MIT (MIT and MIT)'),
-            array('(MIT and MIT) MIT'),
-            array(array('LGPL-2.0-only', 'The system pwns you')),
-            array('and GPL-3.0-or-later'),
-            array('(EUDatagrid and GPL-3.0-or-later and  )'),
-            array('(EUDatagrid xor GPL-3.0-or-later)'),
-            array('(NONE or MIT)'),
-            array('(NOASSERTION or MIT)'),
-            array('Autoconf-exception-2.0 WITH MIT'),
-            array('MIT WITH'),
-            array('MIT OR'),
-            array('MIT AND'),
-        );
+        return [
+            [''],
+            [[]],
+            ['The system pwns you'],
+            ['()'],
+            ['(MIT'],
+            ['MIT)'],
+            ['MIT NONE'],
+            ['MIT AND NONE'],
+            ['MIT (MIT and MIT)'],
+            ['(MIT and MIT) MIT'],
+            [['LGPL-2.0-only', 'The system pwns you']],
+            ['and GPL-3.0-or-later'],
+            ['(EUDatagrid and GPL-3.0-or-later and  )'],
+            ['(EUDatagrid xor GPL-3.0-or-later)'],
+            ['(NONE or MIT)'],
+            ['(NOASSERTION or MIT)'],
+            ['Autoconf-exception-2.0 WITH MIT'],
+            ['MIT WITH'],
+            ['MIT OR'],
+            ['MIT AND'],
+        ];
     }
 
     /**
@@ -316,13 +316,13 @@ class SpdxLicensesTest extends TestCase
      */
     public function provideInvalidArgument()
     {
-        return array(
-            array(null),
-            array(new \stdClass()),
-            array(array(new \stdClass())),
-            array(array('mixed', new \stdClass())),
-            array(array(new \stdClass(), new \stdClass())),
-        );
+        return [
+            [null],
+            [new \stdClass()],
+            [[new \stdClass()]],
+            [['mixed', new \stdClass()]],
+            [[new \stdClass(), new \stdClass()]],
+        ];
     }
 
     /**

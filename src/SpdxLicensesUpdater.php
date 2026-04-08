@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 /*
  * This file is part of composer/spdx-licenses.
@@ -76,7 +76,7 @@ class SpdxLicensesUpdater
      */
     private function getLicenses($url)
     {
-        $licenses = array();
+        $licenses = [];
 
         $data = file_get_contents($url);
         if (false === $data) {
@@ -86,9 +86,9 @@ class SpdxLicensesUpdater
         $data = json_decode($data, true);
 
         foreach ($data['licenses'] as $info) {
-            $licenses[$info['licenseId']] = array(
-                trim($info['name']), $info['isOsiApproved'], $info['isDeprecatedLicenseId']
-            );
+            $licenses[$info['licenseId']] = [
+                trim($info['name']), $info['isOsiApproved'], $info['isDeprecatedLicenseId'],
+            ];
         }
 
         uksort($licenses, 'strcasecmp');
@@ -103,7 +103,7 @@ class SpdxLicensesUpdater
      */
     private function getExceptions($url)
     {
-        $exceptions = array();
+        $exceptions = [];
 
         $data = file_get_contents($url);
         if (false === $data) {
@@ -113,7 +113,7 @@ class SpdxLicensesUpdater
         $data = json_decode($data, true);
 
         foreach ($data['exceptions'] as $info) {
-            $exceptions[$info['licenseExceptionId']] = array(trim($info['name']));
+            $exceptions[$info['licenseExceptionId']] = [trim($info['name'])];
         }
 
         uksort($exceptions, 'strcasecmp');
