@@ -1,3 +1,5 @@
+You can find newer changelog entries in [GitHub releases](https://github.com/composer/spdx-licenses/releases)
+
 # Change Log
 
 All notable changes to this project will be documented in this file.
